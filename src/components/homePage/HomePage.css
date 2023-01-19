@@ -1,0 +1,54 @@
+.infoBox{   
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    text-align: start;
+    flex-wrap: wrap;
+    padding-left: 7vw;
+}
+
+.left-box{
+    width: min(550px,90vw);
+}
+
+.right-box{
+    width: min(650px,90vw);
+    display: flex;
+    height: 100vh;
+    justify-content: flex-end;
+    align-items: center;
+}
+.profilePhoto{
+    height: 540px;
+    border-radius: 10px;
+}
+
+.greeting .nameInfo .fieldInfo{
+    font-family: 'Roboto', sans-serif;
+}
+
+.greeting{
+    font-size: 50px;
+}
+
+.nameInfo{
+    font-size: 60px;
+}
+
+.fieldInfo{
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.collegeInfo{
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px ;
+}
+
+.link-icon{
+    width: 45px;
+}
+.visually-hidden{
+    color: transparent;
+}
+

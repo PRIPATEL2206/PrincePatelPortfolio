@@ -1,0 +1,25 @@
+hr{
+    margin-top: 0px;
+}
+
+.projectFieldContainer{
+    text-align: left;
+    margin-top: 30px;
+}
+
+.projectsBoxContainer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-left: 20px;
+    margin-right:20px ;
+}
+.projectBox{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.projectSS{
+    height: 18rem;
+    overflow: hidden;
+}

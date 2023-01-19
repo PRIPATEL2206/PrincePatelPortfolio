@@ -1,0 +1,27 @@
+hr{
+    margin-top: 0px;
+}
+
+.STFieldContainer {
+    text-align: left;
+    margin-top: 20px;
+}
+
+.STBox {
+    max-height: fit-content;
+    display: flex;
+    flex-direction: row;
+    padding: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.img{
+ height: inherit; 
+ margin: auto;  
+}
+
+.STLogoContainer{
+    height: 5rem;
+    padding: 5px;
+}

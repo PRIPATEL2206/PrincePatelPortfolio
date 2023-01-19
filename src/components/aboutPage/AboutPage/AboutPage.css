@@ -1,0 +1,25 @@
+.AboutContainer{
+    display: flex;
+    flex-direction: column;
+}
+
+.AboutHeading{
+    width: 100%;
+    text-align: left;
+}
+
+.certificatesContainer{
+    padding: 4px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.certificateBox{
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.accordion-body{
+    text-align: left;
+}
