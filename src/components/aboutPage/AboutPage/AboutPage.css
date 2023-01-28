@@ -3,6 +3,14 @@
     flex-direction: column;
 }
 
+.link{
+    text-decoration: none;
+    color: black;
+}
+
+button{
+    border: none;
+}
 .AboutHeading{
     width: 100%;
     text-align: left;

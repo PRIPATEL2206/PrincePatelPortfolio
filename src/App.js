@@ -7,27 +7,30 @@ import ProjectPage from './components/projectPage/ProjectsPage/ProjectPage';
 import SkillsAndToolsPage from './components/skillsAndToolsPage/SkillsAndToolsPage/SkillsAndToolsPage';
 import Footer from './components/footer/Footer';
 import {
-  BrowserRouter as Router,
+  // BrowserRouter as Router,
   Routes,
   Route,
+  HashRouter,
 } from "react-router-dom";
+import Services from './components/services/Services/Services';
 
 
 function App() {
   return (
     <div className="App">
-
-      <Router basename={process.env.PUBLIC_URL} >
+     
+      <HashRouter  >
         <NavBar />
         <Routes >
-          <Route exact path='/' element={<HomePage />}> </Route>
+          <Route path='/' element={<HomePage />}> </Route>
           <Route exact path='/About' element={<AboutPage />}> </Route>
           <Route exact path='/Skill&Tools' element={<SkillsAndToolsPage />}> </Route>
-          <Route path='/Projects' element={<ProjectPage />}> </Route>
-          <Route path='/ContectMe' element={<ContectPage />}> </Route>
-        </Routes>
+          <Route exact path='/Projects' element={<ProjectPage />}> </Route>
+          <Route exact path='/Services' element={<Services />}> </Route>
+          <Route exact path='/ContectMe' element={<ContectPage />}> </Route>
+        </Routes >
         <Footer />
-      </Router>
+      </HashRouter>
     </div>
   );
 }

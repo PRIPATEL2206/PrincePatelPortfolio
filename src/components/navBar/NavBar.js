@@ -5,14 +5,14 @@ import "./NavBar.css";
 export default function NavBar() {
     return (
         <>
-            <nav className="navbar navbar-expand-lg bg-body-tertiary">
+            <nav className="navbar navbar-expand-sm bg-body-tertiary">
                 <div className="container-fluid">
                         <Link to="/" className='navbar-brand'>
-                        <img src="photos/profile.png" className="navIcon" alt="profile" srcset="" />
+                        <img src="https://github.com/PRIPATEL2206/ProjectPhotos/raw/master/Portfolio/photos/profile.png" className="navIcon" alt="profile" srcSet="" />
                         </Link>
                         <h4>Prince Patel</h4>
-                    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-                        <span className="navbar-toggler-icon"></span>
+                    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation" style={{"boxShadow": "none" }}>
+                        <span className="navbar-toggler-icon" ></span>
                     </button>
                     <div className="collapse navbar-collapse" id="navbarTogglerDemo02">
                         <ul className="navbar-nav me-3 ms-auto mb-2 mb-lg-0">
@@ -27,6 +27,9 @@ export default function NavBar() {
                             </li>
                             <li className="nav-item">
                                 <Link to="/Projects" className="nav-link " >Projects</Link>
+                            </li>
+                            <li className="nav-item">
+                                <Link to="/Services" className="nav-link " >Services</Link>
                             </li>
                             <li className="nav-item">
                                 <Link to="/ContectMe" className="nav-link " >Contect Me</Link>

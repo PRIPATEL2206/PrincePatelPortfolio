@@ -8,20 +8,20 @@ export default function ContectPage() {
       <div className="container ">
         <div className="contectBoxContainer">
         <div className="contectBox">
-            <img src="photos\icons\gmail.png" alt="Whatsapp logo" className='contectLogo'/>
+            <img src="https://github.com/PRIPATEL2206/ProjectPhotos/raw/master/Portfolio/photos/icons/gmail.png" alt="gmail logo" className='contectLogo'/>
             <h3> Pr63547890@gecg28.ac.in </h3>
           </div>
           <div className="contectBox">
-            <img src="photos\icons\whatsapp.png" alt="Whatsapp logo" className='contectLogo'/>
+            <img src="https://github.com/PRIPATEL2206/ProjectPhotos/raw/master/Portfolio/photos/icons/whatsapp.png" alt="Whatsapp logo" className='contectLogo'/>
             <h3> 6354789002 </h3>
           </div>
           
           <div className="contectBox">
-            <img src="photos\icons\linkedinIcon.png" alt="Whatsapp logo" className='contectLogo'/>
+            <img src="https://github.com/PRIPATEL2206/ProjectPhotos/raw/master/Portfolio/photos/icons/linkedinIcon.png" alt="linkedIn logo" className='contectLogo'/>
             <h3> <a href="https://www.linkedin.com/in/prince-patel-7900b8212">PRINCE Patel</a></h3>
           </div>
           <div className="contectBox">
-            <img src="photos\icons\gitHubIcon.png" alt="Whatsapp logo" className='contectLogo'/>
+            <img src="https://github.com/PRIPATEL2206/ProjectPhotos/raw/master/Portfolio/photos/icons/gitHubIcon.png" alt="Whatsapp logo" className='contectLogo'/>
             <h3> <a href="https://github.com/PRIPATEL2206?tab=repositories">PRIPATEL2206</a> </h3>
           </div>
         </div>

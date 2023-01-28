@@ -13,7 +13,7 @@ export default function SkillsAndToolsPage() {
         <div className="STBoxContainer">
           <div className="STBox card ">
             <div className="STLogoContainer">
-              <img src="photos/comunication/language.png" className="img rounded-start" alt="langvage logo" />
+              <img src="https://github.com/PRIPATEL2206/ProjectPhotos/raw/master/Portfolio/photos/comunication/language.png" className="img rounded-start" alt="langvage logo" />
             </div>
             <div className="card-body STBoxBody">
               <h5 className="card-title">Language Known</h5>
@@ -23,7 +23,7 @@ export default function SkillsAndToolsPage() {
         </div>
         <div className="STBox card ">
           <div className="STLogoContainer">
-            <img src="photos\comunication\leaderShip.png" className="img rounded-start" alt="leadershp logo" />
+            <img src="https://github.com/PRIPATEL2206/ProjectPhotos/raw/master/Portfolio/photos/comunication/leaderShip.png" className="img rounded-start" alt="leadershp logo" />
           </div>
           <div className="card-body STBoxBody">
             <h5 className="card-title">Leadership</h5>
@@ -32,7 +32,7 @@ export default function SkillsAndToolsPage() {
         </div>
         <div className="STBox card ">
           <div className="STLogoContainer">
-            <img src="photos\comunication\moivate.png" className="img rounded-start" alt="motivate logo" />
+            <img src="https://github.com/PRIPATEL2206/ProjectPhotos/raw/master/Portfolio/photos/comunication/moivate.png" className="img rounded-start" alt="motivate logo" />
           </div>
           <div className="card-body STBoxBody">
             <h5 className="card-title">Motivate someone</h5>
@@ -49,7 +49,7 @@ export default function SkillsAndToolsPage() {
         <div className="STBoxContainer">
           <div className="STBox card ">
             <div className="STLogoContainer">
-              <img src="photos\programing\python.png" className="img rounded-start" alt="python logo" />
+              <img src="https://github.com/PRIPATEL2206/ProjectPhotos/raw/master/Portfolio/photos/programing/python.png" className="img rounded-start" alt="python logo" />
             </div>
             <div className="card-body STBoxBody">
               <h5 className="card-title">Python</h5>
@@ -58,7 +58,7 @@ export default function SkillsAndToolsPage() {
           </div>
           <div className="STBox card ">
             <div className="STLogoContainer">
-              <img src="photos\programing\java.png" className="img rounded-start" alt="java logo" />
+              <img src="https://github.com/PRIPATEL2206/ProjectPhotos/raw/master/Portfolio/photos/programing/java.png" className="img rounded-start" alt="java logo" />
             </div>
             <div className="card-body STBoxBody">
               <h5 className="card-title">Java</h5>
@@ -67,7 +67,7 @@ export default function SkillsAndToolsPage() {
           </div>
           <div className="STBox card ">
             <div className="STLogoContainer">
-              <img src="photos\programing\c.png" className="img rounded-start" alt="c logo" />
+              <img src="https://github.com/PRIPATEL2206/ProjectPhotos/raw/master/Portfolio/photos/programing/c.png" className="img rounded-start" alt="c logo" />
             </div>
             <div className="card-body STBoxBody">
               <h5 className="card-title">C</h5>
@@ -76,7 +76,7 @@ export default function SkillsAndToolsPage() {
           </div>
           <div className="STBox card ">
             <div className="STLogoContainer">
-              <img src="photos\programing\dart.png" className="img rounded-start" alt="dart logo" />
+              <img src="https://github.com/PRIPATEL2206/ProjectPhotos/raw/master/Portfolio/photos/programing/dart.png" className="img rounded-start" alt="dart logo" />
             </div>
             <div className="card-body STBoxBody">
               <h5 className="card-title">Dart</h5>
@@ -94,7 +94,7 @@ export default function SkillsAndToolsPage() {
         <div className="STBoxContainer">
           <div className="STBox card ">
             <div className="STLogoContainer">
-              <img src="photos\webDevelopment\html-5.png" className="img rounded-start" alt="html logo" />
+              <img src="https://github.com/PRIPATEL2206/ProjectPhotos/raw/master/Portfolio/photos/webDevelopment/html-5.png" className="img rounded-start" alt="html logo" />
             </div>
             <div className="card-body STBoxBody">
               <h5 className="card-title">HTML-5</h5>
@@ -103,7 +103,7 @@ export default function SkillsAndToolsPage() {
           </div>
           <div className="STBox card ">
             <div className="STLogoContainer">
-              <img src="photos\webDevelopment\css-3.png" className="img rounded-start" alt="css-3 logo" />
+              <img src="https://github.com/PRIPATEL2206/ProjectPhotos/raw/master/Portfolio/photos/webDevelopment/css-3.png" className="img rounded-start" alt="css-3 logo" />
             </div>
             <div className="card-body STBoxBody">
               <h5 className="card-title">CSS-3</h5>
@@ -112,7 +112,7 @@ export default function SkillsAndToolsPage() {
           </div>
           <div className="STBox card ">
             <div className="STLogoContainer">
-              <img src="photos\webDevelopment\java-script.png" className="img rounded-start" alt="js logo" />
+              <img src="https://github.com/PRIPATEL2206/ProjectPhotos/raw/master/Portfolio/photos/webDevelopment/java-script.png" className="img rounded-start" alt="js logo" />
             </div>
             <div className="card-body STBoxBody">
               <h5 className="card-title">Java Script </h5>
@@ -121,7 +121,7 @@ export default function SkillsAndToolsPage() {
           </div>
           <div className="STBox card ">
             <div className="STLogoContainer">
-              <img src="photos\webDevelopment\react.png" className="img rounded-start" alt="react js logo" />
+              <img src="https://github.com/PRIPATEL2206/ProjectPhotos/raw/master/Portfolio/photos/webDevelopment/react.png" className="img rounded-start" alt="react js logo" />
             </div>
             <div className="card-body STBoxBody">
               <h5 className="card-title">React</h5>
@@ -130,7 +130,7 @@ export default function SkillsAndToolsPage() {
           </div>
           <div className="STBox card ">
             <div className="STLogoContainer">
-              <img src="photos\webDevelopment\django.png" className="img rounded-start" alt="django logo" />
+              <img src="https://github.com/PRIPATEL2206/ProjectPhotos/raw/master/Portfolio/photos/webDevelopment/django.png" className="img rounded-start" alt="django logo" />
             </div>
             <div className="card-body STBoxBody">
               <h5 className="card-title">Django</h5>
@@ -147,7 +147,7 @@ export default function SkillsAndToolsPage() {
         <div className="STBoxContainer">
           <div className="STBox card ">
             <div className="STLogoContainer">
-              <img src="photos\appDevelopment\flutter.png" className="img rounded-start" alt="flutter logo" />
+              <img src="https://github.com/PRIPATEL2206/ProjectPhotos/raw/master/Portfolio/photos/appDevelopment/flutter.png" className="img rounded-start" alt="flutter logo" />
             </div>
             <div className="card-body STBoxBody">
               <h5 className="card-title">Flutter</h5>
@@ -156,7 +156,7 @@ export default function SkillsAndToolsPage() {
         </div>
           <div className="STBox card ">
             <div className="STLogoContainer">
-              <img src="photos\appDevelopment\tkinter.jpg" className="img rounded-start" alt="tkinter logo" />
+              <img src="https://github.com/PRIPATEL2206/ProjectPhotos/raw/master/Portfolio/photos/appDevelopment/tkinter.jpg" className="img rounded-start" alt="tkinter logo" />
             </div>
             <div className="card-body STBoxBody">
               <h5 className="card-title">Tkinter</h5>

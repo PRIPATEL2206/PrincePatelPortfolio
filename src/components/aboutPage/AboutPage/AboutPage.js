@@ -69,7 +69,7 @@ export default function AboutPage() {
                                 <h6>Ya I know you are thinking that hou this boy is who get grater marks in 12<sup>th</sup> than 10<sup>th</sup> But that's true . And for add in you more wonder in 10 <sup>th</sup> i have tuition and in 12 <sup>th</sup> i don't have any tuition. My friends who say me to choose biology for more marks in  12 i have score more then them all actually i get 1 <sup>st</sup> rank in my school.😎 </h6>
                                 <h6>That's my story up to 12 <sup>th</sup>.Than begin collage life.</h6>
                                 <h6>I always like to work with new technology sometimes it is wonder for me how this technology woks so i select engineering as carrier. </h6>
-                                <h6>Due to higher science Percentile Rank i get 2353 ACPC(Admission Committee for Professional Courses).And get addmision in G.E.C. GANDHINAGAR in fiels BE in branch IT💻.In collage life i get lots of Information about technology that you can find in <Link to="/Skill&Tools" >Skill & Tools</Link> Section</h6>
+                                <h6>Due to higher science Percentile Rank i get 2353 ACPC(Admission Committee for Professional Courses).And get addmision in G.E.C. GANDHINAGAR in fiels BE in branch IT💻.In collage life i get lots of Information about technology that you can find in <button><Link to="/Skill&Tools" className='link' >Skill & Tools</Link></button> Section</h6>
                                 <h6>Here is my SPI and CPI in BE</h6>
                                 <table className="table">
                                     <thead>
