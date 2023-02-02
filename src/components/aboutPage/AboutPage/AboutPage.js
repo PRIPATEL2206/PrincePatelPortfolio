@@ -2,18 +2,40 @@ import React from 'react'
 import { Link } from 'react-router-dom';
 import './AboutPage.css';
 
-export default function AboutPage() {
+export default function AboutPage({themeIndex}) {
+    const aboutTheme=[
+        {
+            bgcolor: "bg-black",
+            textColor:"text-white"
+        },
+        {
+            bgcolor: "",
+            textColor:""
+        },
+
+    ]
+    const certificate = ["https://github.com/PRIPATEL2206/ProjectPhotos/raw/master/Portfolio/photos/certificate/python_linkein.png",
+        "https://github.com/PRIPATEL2206/ProjectPhotos/raw/master/Portfolio/photos/certificate/python5secrets.png",
+        "https://github.com/PRIPATEL2206/ProjectPhotos/raw/master/Portfolio/photos/certificate/python_marvadi.png",
+        "https://github.com/PRIPATEL2206/ProjectPhotos/raw/master/Portfolio/photos/certificate/ibm_data_science.png",
+        "https://github.com/PRIPATEL2206/ProjectPhotos/raw/master/Portfolio/photos/certificate/gameDevelopment.png",
+        "https://github.com/PRIPATEL2206/ProjectPhotos/raw/master/Portfolio/photos/certificate/crowdsourse.png",
+        "https://github.com/PRIPATEL2206/ProjectPhotos/raw/master/Portfolio/photos/certificate/codeSprit1.png",
+        "https://github.com/PRIPATEL2206/ProjectPhotos/raw/master/Portfolio/photos/certificate/google_30days.png",
+        "https://github.com/PRIPATEL2206/ProjectPhotos/raw/master/Portfolio/photos/certificate/Ide_cp.png",
+        "https://github.com/PRIPATEL2206/ProjectPhotos/raw/master/Portfolio/photos/certificate/online_programing.png",
+        "https://github.com/PRIPATEL2206/ProjectPhotos/raw/master/Portfolio/photos/certificate/sk.png"]
     return (
-        <div className='AboutPage p-3'>
+        <div className={`AboutPage p-3 ${aboutTheme[themeIndex].bgcolor} ${aboutTheme[themeIndex].textColor} `}>
             <h1>About</h1>
             <div className="container infoContainer ">
 
-                <div className="accordion accordion-flush" id="accordionFlushExample">
+                <div className="accordion accordion-flush " id="accordionFlushExample">
 
                     {/* personal info */}
-                    <div className="accordion-item">
+                    <div className={`accordion-item ${aboutTheme[themeIndex].bgcolor} ${aboutTheme[themeIndex].textColor}`} >
                         <h2 className="accordion-header" id="flush-headingOne">
-                            <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                            <button className="accordion-button collapsed " type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
                                 <h2>Personal Information 🤵</h2>
                             </button>
                         </h2>
@@ -29,7 +51,7 @@ export default function AboutPage() {
                     </div>
 
                     {/* education info */}
-                    <div className="accordion-item">
+                    <div className={`accordion-item ${aboutTheme[themeIndex].bgcolor} ${aboutTheme[themeIndex].textColor}`} >
                         <h2 className="accordion-header" id="flush-headingTwo">
                             <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
                                 <h2>Education Information 👨‍🎓</h2>
@@ -112,7 +134,7 @@ export default function AboutPage() {
                     </div>
 
                     {/* hobbys */}
-                    <div className="accordion-item">
+                    <div className={`accordion-item ${aboutTheme[themeIndex].bgcolor} ${aboutTheme[themeIndex].textColor}`} >
                         <h2 className="accordion-header" id="flush-headingThree">
                             <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
                                 <h2>Hobbys 👨‍🎨</h2>
@@ -122,14 +144,14 @@ export default function AboutPage() {
                             <div className="accordion-body">
                                 <h6>For sport i like all sports from local to national.I just like to play who won who looses dose't metter.</h6>
                                 <ul className="list-group">
-                                    <li className="list-group-item">Hand boll</li>
-                                    <li className="list-group-item">Playing chess</li>
-                                    <li className="list-group-item">solving maths problems</li>
-                                    <li className="list-group-item">know more about new technology</li>
-                                    <li className="list-group-item">Motivat people</li>
-                                    <li className="list-group-item">Devlop Website</li>
-                                    <li className="list-group-item">Devlop App</li>
-                                    <li className="list-group-item">Devlop Game </li>
+                                    <li className={`list-group-item ${aboutTheme[themeIndex].bgcolor} ${aboutTheme[themeIndex].textColor} `}>Hand boll</li>
+                                    <li className={`list-group-item ${aboutTheme[themeIndex].bgcolor} ${aboutTheme[themeIndex].textColor} `}>Playing chess</li>
+                                    <li className={`list-group-item ${aboutTheme[themeIndex].bgcolor} ${aboutTheme[themeIndex].textColor} `}>solving maths problems</li>
+                                    <li className={`list-group-item ${aboutTheme[themeIndex].bgcolor} ${aboutTheme[themeIndex].textColor} `}>know more about new technology</li>
+                                    <li className={`list-group-item ${aboutTheme[themeIndex].bgcolor} ${aboutTheme[themeIndex].textColor} `}>Motivat people</li>
+                                    <li className={`list-group-item ${aboutTheme[themeIndex].bgcolor} ${aboutTheme[themeIndex].textColor} `}>Devlop Website</li>
+                                    <li className={`list-group-item ${aboutTheme[themeIndex].bgcolor} ${aboutTheme[themeIndex].textColor} `}>Devlop App</li>
+                                    <li className={`list-group-item ${aboutTheme[themeIndex].bgcolor} ${aboutTheme[themeIndex].textColor} `}>Devlop Game </li>
                                 </ul>
                                 <h6>You can find my some projects in <Link to="/Projects">Project </Link> Section</h6>
                             </div>
@@ -144,38 +166,15 @@ export default function AboutPage() {
 
                         <div className="certificatesContainer">
 
-                            <div className="card certificateBox" style={{ "width": "18rem" }}>
-                                <img src="logo512.png" className="card-img-top" alt="..." />
-                                <div className="card-body">
-                                    <h5 className="card-title">Card title</h5>
-                                    <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                    <a href="/" className="btn btn-primary">See in details</a>
-                                </div>
-                            </div>
-                            <div className="card certificateBox" style={{ "width": "18rem" }}>
-                                <img src="logo512.png" className="card-img-top" alt="..." />
-                                <div className="card-body">
-                                    <h5 className="card-title">Card title</h5>
-                                    <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                    <a href="/" className="btn btn-primary">See in details</a>
-                                </div>
-                            </div>
-                            <div className="card certificateBox" style={{ "width": "18rem" }}>
-                                <img src="logo512.png" className="card-img-top" alt="..." />
-                                <div className="card-body">
-                                    <h5 className="card-title">Card title</h5>
-                                    <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                    <a href="/" className="btn btn-primary">See in details</a>
-                                </div>
-                            </div>
-                            <div className="card certificateBox" style={{ "width": "18rem" }}>
-                                <img src="logo512.png" className="card-img-top" alt="..." />
-                                <div className="card-body">
-                                    <h5 className="card-title">Card title</h5>
-                                    <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                    <a href="/" className="btn btn-primary">See in details</a>
-                                </div>
-                            </div>
+                            {
+                            certificate.map((element,index) =>{
+                                return (
+                                    <div className="card certificateBox" key={index} style={{ "width": "18rem" }}>
+                                        <img src={element} className="card-img-top" alt="" />
+                                    </div>
+                                );
+                            })
+                            }
                         </div>
 
 

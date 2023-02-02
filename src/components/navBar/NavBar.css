@@ -1,8 +1,27 @@
-.navIcon{
-    height:2rem;
+.navIcon {
+    height: 2rem;
 }
-.navbar{
+
+.navbar {
     position: sticky;
     top: 0px;
     z-index: 100;
+}
+
+.swith-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10px;
+}
+.form-switch .form-check-input {
+    background-color:black;
+    width: 38px;
+    height: 28px;
+    outline: 0;
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='white'/%3e%3c/svg%3e");
+}
+.form-check-input:checked {
+    background-color:rgba(13, 110, 253, 1);
 }
