@@ -19,10 +19,10 @@ export default function NavBar({ themeIndex, changeThemeIndex }) {
             <nav className={`navbar navbar-expand-sm bg-${navTheme[themeIndex]}`} data-bs-theme={`${navTheme[themeIndex]}`}>
                 <div className="container-fluid" >
                     <Link to="/" onClick={expendCollaps} className='navbar-brand'>
-                        <img src="https://github.com/PRIPATEL2206/ProjectPhotos/raw/master/Portfolio/photos/profile.png" className="navIcon" alt="profile" srcSet="" />
+                        <img src="photos/profile.png" className="navIcon" alt="profile" srcSet="" />
                     </Link>
                     <h4>Prince Patel</h4>
-                    <button id='collapsButton' className={`navbar-toggler `} type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation" style={{ "boxShadow": "none" }}>
+                    <button id='collapsButton' className={`navbar-toggler bg-${themeIndex!==0?'':'light'}`} type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation" style={{ "boxShadow": "none" }}>
                         <span className="navbar-toggler-icon" ></span>
                     </button>
                     <div className="collapse navbar-collapse  " style={{ overflow: "hidden" }} id="navbarTogglerDemo02">
@@ -43,7 +43,7 @@ export default function NavBar({ themeIndex, changeThemeIndex }) {
                                 <Link to="/Services" onClick={expendCollaps} className="nav-link" > Services </Link>
                             </li>
                             <li className="nav-item">
-                                <Link to="/ContectMe" onClick={expendCollaps} className="nav-link" > Contect Me </Link>
+                                <Link to="/ContectMe" onClick={expendCollaps} className="nav-link" > Contact Me</Link>
                             </li>
                             <li className="nav-item swith-item">
                                 <div className="form-check form-switch">

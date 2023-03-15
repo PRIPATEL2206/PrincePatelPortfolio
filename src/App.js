@@ -14,8 +14,8 @@ import {
 import Services from './components/services/Services/Services';
 import { useState } from 'react';
 
-//   "homepage": "http://PRIPATEL2206.github.io/PrincePatelPortfolio",
-// https://github.com/PRIPATEL2206/ProjectPhotos/raw/master/Portfolio/photos/
+// "homepage": "http://PRIPATEL2206.github.io/PrincePatelPortfolio",
+// photos/
 
 function App() {
 

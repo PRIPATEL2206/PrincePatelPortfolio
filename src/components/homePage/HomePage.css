@@ -59,7 +59,7 @@
     border: 2px solid black;
     padding: 3px 5px;
     transition: all ease-in-out 1s;
-    animation: skill 20s ease-in-out infinite;
+    animation: skill 10s ease-in-out infinite;
 }
 
 @keyframes skill {

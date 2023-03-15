@@ -14,17 +14,17 @@ export default function AboutPage({themeIndex}) {
         },
 
     ]
-    const certificate = ["https://github.com/PRIPATEL2206/ProjectPhotos/raw/master/Portfolio/photos/certificate/python_linkein.png",
-        "https://github.com/PRIPATEL2206/ProjectPhotos/raw/master/Portfolio/photos/certificate/python5secrets.png",
-        "https://github.com/PRIPATEL2206/ProjectPhotos/raw/master/Portfolio/photos/certificate/python_marvadi.png",
-        "https://github.com/PRIPATEL2206/ProjectPhotos/raw/master/Portfolio/photos/certificate/ibm_data_science.png",
-        "https://github.com/PRIPATEL2206/ProjectPhotos/raw/master/Portfolio/photos/certificate/gameDevelopment.png",
-        "https://github.com/PRIPATEL2206/ProjectPhotos/raw/master/Portfolio/photos/certificate/crowdsourse.png",
-        "https://github.com/PRIPATEL2206/ProjectPhotos/raw/master/Portfolio/photos/certificate/codeSprit1.png",
-        "https://github.com/PRIPATEL2206/ProjectPhotos/raw/master/Portfolio/photos/certificate/google_30days.png",
-        "https://github.com/PRIPATEL2206/ProjectPhotos/raw/master/Portfolio/photos/certificate/Ide_cp.png",
-        "https://github.com/PRIPATEL2206/ProjectPhotos/raw/master/Portfolio/photos/certificate/online_programing.png",
-        "https://github.com/PRIPATEL2206/ProjectPhotos/raw/master/Portfolio/photos/certificate/sk.png"]
+    const certificate = ["photos/certificate/python_linkein.png",
+        "photos/certificate/python5secrets.png",
+        "photos/certificate/python_marvadi.png",
+        "photos/certificate/ibm_data_science.png",
+        "photos/certificate/gameDevelopment.png",
+        "photos/certificate/crowdsourse.png",
+        "photos/certificate/codeSprit1.png",
+        "photos/certificate/google_30days.png",
+        "photos/certificate/Ide_cp.png",
+        "photos/certificate/online_programing.png",
+        "photos/certificate/sk.png"]
     return (
         <div className={`AboutPage p-3 ${aboutTheme[themeIndex].bgcolor} ${aboutTheme[themeIndex].textColor} `}>
             <h1>About</h1>
@@ -41,11 +41,11 @@ export default function AboutPage({themeIndex}) {
                         </h2>
                         <div id="flush-collapseOne" className="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
                             <div className="accordion-body">
-                                <h6>Hi my full name is PrinceKumar RajeshBhai Patel</h6>
+                                <h6>Hi my full name is PrinceKumar RajeshBhai Patel.</h6>
                                 <h6>My residential city is MEHSANA in state GUJARAT Which is in INDIA. </h6>
                                 <h6>I am coming from Village called Balol in Mesana.</h6>
-                                <h6>Corrently doing bachelor of engineering in field of IT(INFORMATION TECHNOLOGY).</h6>
-                                <h6>And that all me</h6>
+                                <h6>Currently pursuing my Bachelors of Engineering in IT(Infomation Technology).</h6>
+                                <h6>And that's all about me.</h6>
                             </div>
                         </div>
                     </div>
@@ -54,17 +54,17 @@ export default function AboutPage({themeIndex}) {
                     <div className={`accordion-item ${aboutTheme[themeIndex].bgcolor} ${aboutTheme[themeIndex].textColor}`} >
                         <h2 className="accordion-header" id="flush-headingTwo">
                             <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-                                <h2>Education Information 👨‍🎓</h2>
+                                <h2>Educational Information 👨‍🎓</h2>
                             </button>
                         </h2>
                         <div id="flush-collapseTwo" className="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
                             <div className="accordion-body">
-                                <h6>I have studied my Secondary and Higher Secondary in I.M.J. SAVRVA VIDHYALAY , BALOL.
-                                    In 12 <sup>th</sup>  have  choose Science stream  as my carrier . The best decision i have made is by choosing main field as MATHS in  science . My most of the friends choose biology and they all say me to come with them biology is easy to learn and get more score in 12. But i not follow them and choose maths as i like most. We are only 7 students in maths.😅 </h6>
+                                <h6>I completed my secondary and higher secondary education at I.M.J. Savrva Vidhyalay in Balol.
+                                    During my final year of high school, I had to decide on a field of study, and I chose science with a focus on mathematics. It was the best decision I ever made. Most of my friends chose biology and tried to persuade me to do the same, claiming that it was easier to learn and score better marks in. However, I stuck to my passion for mathematics and pursued it instead. In the end, there were only seven of us who chose mathematics, but I am glad I followed my heart. </h6>
                                 <h6>Pass out from gujarat bord here is some info about</h6>
 
 
-                                <table className="table">
+                                <table className={`table ${aboutTheme[themeIndex].textColor}`}>
                                     <thead>
                                         <tr>
                                             <th scope="col">#</th>
@@ -88,16 +88,16 @@ export default function AboutPage({themeIndex}) {
                                         </tr>
                                     </tbody>
                                 </table>
-                                <h6>Ya I know you are thinking that hou this boy is who get grater marks in 12<sup>th</sup> than 10<sup>th</sup> But that's true . And for add in you more wonder in 10 <sup>th</sup> i have tuition and in 12 <sup>th</sup> i don't have any tuition. My friends who say me to choose biology for more marks in  12 i have score more then them all actually i get 1 <sup>st</sup> rank in my school.😎 </h6>
-                                <h6>That's my story up to 12 <sup>th</sup>.Than begin collage life.</h6>
-                                <h6>I always like to work with new technology sometimes it is wonder for me how this technology woks so i select engineering as carrier. </h6>
-                                <h6>Due to higher science Percentile Rank i get 2353 ACPC(Admission Committee for Professional Courses).And get addmision in G.E.C. GANDHINAGAR in fiels BE in branch IT💻.In collage life i get lots of Information about technology that you can find in <button><Link to="/Skill&Tools" className='link' >Skill & Tools</Link></button> Section</h6>
+                                <h6>Ya I know you are thinking that how this boy who get more marks in 12<sup>th</sup> than 10<sup>th</sup>, but that's true. And to add to this to make you more wonder in 10th i had tuition and in 12<sup>th</sup> i don't had any tuition. My friends who told me to choose biology for more marks in 12th I scored more than them all actually I got 1 <sup>st</sup> rank in my school.😎</h6>
+                                <h6>That's my story up to 12<sup>th</sup>,then begins the college life.</h6>
+                                <h6>I always like to work with new technology sometimes it is wonder for me how this technology works so I select engineering as career. </h6>
+                                <h6>Due to higher science Percentile Rank I got 2353 rank in  ACPC(Admission Committee for Professional Courses).And got admission in G.E.C. GANDHINAGAR for BE in IT💻.In college life i get lots of Information about technology that you can find in <button><Link to="/Skill&Tools" className='link' >Skill & Tools</Link></button> Section</h6>
                                 <h6>Here is my SPI and CPI in BE</h6>
-                                <table className="table">
+                                <table className={`table ${aboutTheme[themeIndex].textColor}`}>
                                     <thead>
                                         <tr>
                                             <th scope="col">#</th>
-                                            <th scope="col">Semister</th>
+                                            <th scope="col">Semester</th>
                                             <th scope="col">SPI</th>
                                             <th scope="col">CPI</th>
                                         </tr>
@@ -137,7 +137,7 @@ export default function AboutPage({themeIndex}) {
                     <div className={`accordion-item ${aboutTheme[themeIndex].bgcolor} ${aboutTheme[themeIndex].textColor}`} >
                         <h2 className="accordion-header" id="flush-headingThree">
                             <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-                                <h2>Hobbys 👨‍🎨</h2>
+                                <h2>Honbies 👨‍🎨</h2>
                             </button>
                         </h2>
                         <div id="flush-collapseThree" className="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">

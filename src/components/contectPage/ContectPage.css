@@ -1,5 +1,7 @@
 .contectPage{
     padding: 34px;
+    height: 90vh;
+    width: calc(100vw-34px);
 }
 
 .contectLogo{
