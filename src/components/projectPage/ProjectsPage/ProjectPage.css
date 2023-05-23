@@ -2,6 +2,15 @@ hr{
     margin-top: 0px;
 }
 
+
+.probtns{
+   display: flex;
+}
+.probtn{
+margin: 2px;
+padding: 6px;
+}
+
 .projectFieldContainer{
     text-align: left;
     margin-top: 30px;

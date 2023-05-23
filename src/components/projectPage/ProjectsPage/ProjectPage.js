@@ -1,25 +1,25 @@
 import React from 'react'
 import './ProjectPage.css'
 
-export default function ProjectPage({themeIndex}) {
+export default function ProjectPage({ themeIndex }) {
   const projectTheme = [
     {
       bgcolor: "bg-black",
       textColor: "text-white",
-      cardBgColor:"bg-dark",
-      muuteTextColor:"text-white-50"
-      
+      cardBgColor: "bg-dark",
+      muuteTextColor: "text-white-50"
+
     },
     {
       bgcolor: "",
       textColor: "",
-      cardBgColor:"",
-      muuteTextColor:"text-muted"
+      cardBgColor: "",
+      muuteTextColor: "text-muted"
     },
 
   ]
   return (
-    <div className={`projectPage ${projectTheme[themeIndex].bgcolor} ${projectTheme[themeIndex].textColor }`}>
+    <div className={`projectPage ${projectTheme[themeIndex].bgcolor} ${projectTheme[themeIndex].textColor}`}>
       <div className='p-3 container'>
         <h2>Projects</h2>
 
@@ -91,76 +91,82 @@ export default function ProjectPage({themeIndex}) {
                 <a href="https://github.com/PRIPATEL2206/Informatica_App" className="btn btn-primary">See in details</a>
               </div>
             </div>
-          </div>
-          <div className="projectsBoxContainer">
             <div className={`card projectBox  ${projectTheme[themeIndex].cardBgColor}`} style={{ "width": "18rem" }}>
               <img src="photos/projectSS/appDevolopment/pChat.png" className="card-img-top " alt="informatica app SS" />
               <div className="card-body">
                 <h5 className="card-title">PChat App</h5>
                 <p className="card-text">Pchat is a Chating app that allow users to chat with each other in a group add friends in group and some other chating functionalitys . It is with login and email veryfication functionality.some cool fitures like search users to add and search group you added.  </p>
                 <p className="card-text"><small className={`text-muted ${projectTheme[themeIndex].muuteTextColor}`}>Flutter</small></p>
-                <a href="https://github.com/PRIPATEL2206/P-Chat-App" className="btn btn-primary">See in GitHub</a>
-                <a href="https://github.com/PRIPATEL2206/P-Chat-App/blob/master/app.apk" className="btn btn-primary" download={true}>Downlode App</a>
+                <div className="probtns">
+
+                <a href="https://github.com/PRIPATEL2206/P-Chat-App" className="probtn btn btn-primary">See in GitHub</a>
+                <a href="https://github.com/PRIPATEL2206/P-Chat-App/blob/master/app.apk" className="probtn btn btn-primary" download={true}>Downlode App</a>
+                </div>
+                
               </div>
             </div>
-          </div>
-          <div className="projectsBoxContainer">
             <div className={`card projectBox  ${projectTheme[themeIndex].cardBgColor}`} style={{ "width": "18rem" }}>
               <img src="photos/projectSS/appDevolopment/pPost.png" className="card-img-top " alt="informatica app SS" />
               <div className="card-body">
                 <h5 className="card-title">PPost App</h5>
                 <p className="card-text">PPost is app for sending post, get and some other reqevest like post man.we can send json body with reqevest that requrds. And get respose that will display in bottom</p>
                 <p className="card-text"><small className={`text-muted ${projectTheme[themeIndex].muuteTextColor}`}>Flutter</small></p>
-                <a href="https://github.com/PRIPATEL2206/ppost-mobile-app" className="btn btn-primary">See in GitHub</a>
-                <a href="https://github.com/PRIPATEL2206/ppost-mobile-app/blob/master/app.apk" className="btn btn-primary" download={true}>Downlode App</a>
+             <div className="probtns">
+
+                <a href="https://github.com/PRIPATEL2206/ppost-mobile-app" className="probtn btn btn-primary">See in GitHub</a>
+                <a href="https://github.com/PRIPATEL2206/ppost-mobile-app/blob/master/app.apk" className="probtn btn btn-primary" download={true}>Downlode App</a>
+             </div>
+             
               </div>
             </div>
-          </div>
-          <div className="projectsBoxContainer">
             <div className={`card projectBox  ${projectTheme[themeIndex].cardBgColor}`} style={{ "width": "18rem" }}>
-              <img src="photos/projectSS/appDevolopment/quotes.png" className="card-img-top " alt="informatica app SS" />
+              <img src="photos/projectSS/appDevolopment/quotes.jpg" className="card-img-top " alt="informatica app SS" />
               <div className="card-body">
                 <h5 className="card-title">Quote App</h5>
                 <p className="card-text">Quote app is app that display differnt Quote that you want. here you can search for quote by its hading or by auther name. ther is a section where you can store your favorate quotes </p>
                 <p className="card-text"><small className={`text-muted ${projectTheme[themeIndex].muuteTextColor}`}>Flutter</small></p>
-                <a href="https://github.com/PRIPATEL2206/quotes_app" className="btn btn-primary">See in GitHub</a>
-                <a href="https://github.com/PRIPATEL2206/quotes_app/blob/master/app.apk" className="btn btn-primary" download={true}>Downlode App</a>
+                <div className="probtns">
+
+                <a href="https://github.com/PRIPATEL2206/quotes_app" className= "probtn  btn btn-primary">See in GitHub</a>
+                <a href="https://github.com/PRIPATEL2206/quotes_app/blob/master/app.apkp" className="probtn  btn btn-primary" download={true}>Downlode App</a>
+                </div>
+                
               </div>
             </div>
           </div>
-        </div>
 
-        {/* Game Devolopment */}
-        <div className="projectFieldContainer">
+          {/* Game Devolopment */}
+          <div className="projectFieldContainer">
 
-          <h3>Game Development</h3>
-          <hr className="border border-primary border-2 opacity-50" />
-          <div className="projectsBoxContainer">
-            <div className={`card projectBox  ${projectTheme[themeIndex].cardBgColor}`} style={{ "width": "18rem" }}>
-              <img src="photos/projectSS/gameDevolopment/chessWeb.jpg" className="card-img-top projectSS" alt="chess web game" />
-              <div className="card-body">
-                <h5 className="card-title">Web Chess Game</h5>
-                <p className="card-text">This is web base chess game. As i like most to play chess i made one for me.I am working on it and adding more animation an functionality in this game.</p>
-                <p className="card-text"><small className={`text-muted ${projectTheme[themeIndex].muuteTextColor}`}>HTML | CSS | JS</small></p>
-                <a href="https://pripatel2206.github.io/WebProjects/Games/Chass%20Game/index.html" className="btn btn-primary">Play 🎮</a>
+            <h3>Game Development</h3>
+            <hr className="border border-primary border-2 opacity-50" />
+            <div className="projectsBoxContainer">
+              <div className={`card projectBox  ${projectTheme[themeIndex].cardBgColor}`} style={{ "width": "18rem" }}>
+                <img src="photos/projectSS/gameDevolopment/chessWeb.jpg" className="card-img-top projectSS" alt="chess web game" />
+                <div className="card-body">
+                  <h5 className="card-title">Web Chess Game</h5>
+                  <p className="card-text">This is web base chess game. As i like most to play chess i made one for me.I am working on it and adding more animation an functionality in this game.</p>
+                  <p className="card-text"><small className={`text-muted ${projectTheme[themeIndex].muuteTextColor}`}>HTML | CSS | JS</small></p>
+                  <a href="https://pripatel2206.github.io/WebProjects/Games/Chass%20Game/index.html" className="btn btn-primary">Play 🎮</a>
+                </div>
               </div>
-            </div>
-            <div className={`card projectBox  ${projectTheme[themeIndex].cardBgColor}`} style={{ "width": "18rem" }}>
-              <img src="photos/projectSS/gameDevolopment/snackWeb.jpg" className="card-img-top projectSS" alt="snack web game" />
-              <div className="card-body">
-                <h5 className="card-title">Web Snake Game</h5>
-                <p className="card-text">This is Snake game that we all play in old nokia phones. This is same but in web you can use keybord key as well as controler is given for controlling snake direction. </p>
-                <p className="card-text"><small className={`text-muted ${projectTheme[themeIndex].muuteTextColor}`}>HTML | CSS | JS</small></p>
-                <a href="https://pripatel2206.github.io/WebProjects/Games/Snack%20Game/index.html" className="btn btn-primary">Play 🎮</a>
+              <div className={`card projectBox  ${projectTheme[themeIndex].cardBgColor}`} style={{ "width": "18rem" }}>
+                <img src="photos/projectSS/gameDevolopment/snackWeb.jpg" className="card-img-top projectSS" alt="snack web game" />
+                <div className="card-body">
+                  <h5 className="card-title">Web Snake Game</h5>
+                  <p className="card-text">This is Snake game that we all play in old nokia phones. This is same but in web you can use keybord key as well as controler is given for controlling snake direction. </p>
+                  <p className="card-text"><small className={`text-muted ${projectTheme[themeIndex].muuteTextColor}`}>HTML | CSS | JS</small></p>
+                  <a href="https://pripatel2206.github.io/WebProjects/Games/Snack%20Game/index.html" className="btn btn-primary">Play 🎮</a>
+                </div>
               </div>
-            </div>
-            <div className={`card projectBox  ${projectTheme[themeIndex].cardBgColor}`} style={{ "width": "18rem" }}>
-              <img src="photos/projectSS/gameDevolopment/tictactoeWeb.jpg" className="card-img-top projectSS" alt="tic tac toe web game" />
-              <div className="card-body">
-                <h5 className="card-title"> Web tic tac toe Game</h5>
-                <p className="card-text">This is one more game that we all play in our school time on paper. I think why we don't use app for playing this game this will reduce pollution also. Than i made this web base game.</p>
-                <p className="card-text"><small className={`text-muted ${projectTheme[themeIndex].muuteTextColor}`}>HTML | CSS | JS</small></p>
-                <a href="https://pripatel2206.github.io/WebProjects/Games/Cross%20Circule%20Game/index.html" className="btn btn-primary">Play 🎮</a>
+              <div className={`card projectBox  ${projectTheme[themeIndex].cardBgColor}`} style={{ "width": "18rem" }}>
+                <img src="photos/projectSS/gameDevolopment/tictactoeWeb.jpg" className="card-img-top projectSS" alt="tic tac toe web game" />
+                <div className="card-body">
+                  <h5 className="card-title"> Web tic tac toe Game</h5>
+                  <p className="card-text">This is one more game that we all play in our school time on paper. I think why we don't use app for playing this game this will reduce pollution also. Than i made this web base game.</p>
+                  <p className="card-text"><small className={`text-muted ${projectTheme[themeIndex].muuteTextColor}`}>HTML | CSS | JS</small></p>
+                  <a href="https://pripatel2206.github.io/WebProjects/Games/Cross%20Circule%20Game/index.html" className="btn btn-primary">Play 🎮</a>
+                </div>
               </div>
             </div>
           </div>
