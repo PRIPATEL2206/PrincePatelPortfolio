@@ -92,6 +92,30 @@ export default function ProjectPage({themeIndex}) {
               </div>
             </div>
           </div>
+          <div className="projectsBoxContainer">
+            <div className={`card projectBox  ${projectTheme[themeIndex].cardBgColor}`} style={{ "width": "18rem" }}>
+              <img src="photos/projectSS/appDevolopment/informaticaApp.png" className="card-img-top " alt="informatica app SS" />
+              <div className="card-body">
+                <h5 className="card-title">PChat App</h5>
+                <p className="card-text">Pchat is a Chating app that allow users to chat with each other in a group add friends in group and some other chating functionalitys . It is with login and email veryfication functionality.some cool fitures like search users to add and search group you added.  </p>
+                <p className="card-text"><small className={`text-muted ${projectTheme[themeIndex].muuteTextColor}`}>Flutter</small></p>
+                <a href="https://github.com/PRIPATEL2206/Informatica_App" className="btn btn-primary">See in GitHub</a>
+                <a href="https://github.com/PRIPATEL2206/Informatica_App" className="btn btn-primary" download={true}>Downlode</a>
+              </div>
+            </div>
+          </div>
+          <div className="projectsBoxContainer">
+            <div className={`card projectBox  ${projectTheme[themeIndex].cardBgColor}`} style={{ "width": "18rem" }}>
+              <img src="photos/projectSS/appDevolopment/informaticaApp.png" className="card-img-top " alt="informatica app SS" />
+              <div className="card-body">
+                <h5 className="card-title">PPost App</h5>
+                <p className="card-text">PPost is app for sending post, get and some other reqevest like post man.we can send json body with reqevest that requrds. And get respose that will display in bottom</p>
+                <p className="card-text"><small className={`text-muted ${projectTheme[themeIndex].muuteTextColor}`}>Flutter</small></p>
+                <a href="https://github.com/PRIPATEL2206/Informatica_App" className="btn btn-primary">See in GitHub</a>
+                <a href="https://github.com/PRIPATEL2206/Informatica_App" className="btn btn-primary" download={true}>Downlode</a>
+              </div>
+            </div>
+          </div>
         </div>
 
         {/* Game Devolopment */}
