@@ -100,7 +100,7 @@ export default function ProjectPage({ themeIndex }) {
                 <div className="probtns">
 
                 <a href="https://github.com/PRIPATEL2206/P-Chat-App" className="probtn btn btn-primary">See in GitHub</a>
-                <a href="https://github.com/PRIPATEL2206/P-Chat-App/blob/master/app.apk" className="probtn btn btn-primary" download={true}>Downlode App</a>
+                <a href="https://github.com/PRIPATEL2206/P-Chat-App/raw/master/app.apk" className="probtn btn btn-primary" download >Downlode App</a>
                 </div>
                 
               </div>
@@ -114,7 +114,7 @@ export default function ProjectPage({ themeIndex }) {
              <div className="probtns">
 
                 <a href="https://github.com/PRIPATEL2206/ppost-mobile-app" className="probtn btn btn-primary">See in GitHub</a>
-                <a href="https://github.com/PRIPATEL2206/ppost-mobile-app/blob/master/app.apk" className="probtn btn btn-primary" download={true}>Downlode App</a>
+                <a href="https://github.com/PRIPATEL2206/ppost-mobile-app/raw/master/app.apk" className="probtn btn btn-primary" download >Downlode App</a>
              </div>
              
               </div>
@@ -128,7 +128,7 @@ export default function ProjectPage({ themeIndex }) {
                 <div className="probtns">
 
                 <a href="https://github.com/PRIPATEL2206/quotes_app" className= "probtn  btn btn-primary">See in GitHub</a>
-                <a href="https://github.com/PRIPATEL2206/quotes_app/blob/master/app.apkp" className="probtn  btn btn-primary" download={true}>Downlode App</a>
+                <a href="https://github.com/PRIPATEL2206/quotes_app/raw/master/app.apk" className="probtn  btn btn-primary" download >Downlode App</a>
                 </div>
                 
               </div>
