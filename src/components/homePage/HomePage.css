@@ -33,7 +33,8 @@
 }
 
 .profilePhoto {
-    height: 540px;
+
+    width: 400px;
     border-top-left-radius: 40px;
     border-top-right-radius: 40px;
 }
@@ -91,4 +92,10 @@
 .tf-3{
 
     font-size: 15px;
+}
+
+@media screen and (max-width:600px) {
+    .profilePhoto{
+        width: 310px;
+    }
 }
