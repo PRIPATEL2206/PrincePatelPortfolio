@@ -34,7 +34,8 @@
 
 .profilePhoto {
     height: 540px;
-    border-radius: 10px;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
 }
 
 .greeting .nameInfo .fieldInfo {
@@ -81,13 +82,13 @@
 }
 
 .link-icon {
-    width: 45px;
+    width: 50px;
 }
 
 .visually-hidden {
     color: transparent;
 }
+.tf-3{
 
-@media screen and (max-width:1270px) {
-
+    font-size: 15px;
 }

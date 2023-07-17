@@ -25,3 +25,8 @@
 .form-check-input:checked {
     background-color:rgba(13, 110, 253, 1);
 }
+.nav-link:hover   {
+    font-size: 13px;
+    color: teal;
+
+}

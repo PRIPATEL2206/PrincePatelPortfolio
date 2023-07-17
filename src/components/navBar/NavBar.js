@@ -45,8 +45,11 @@ export default function NavBar({ themeIndex, changeThemeIndex }) {
                             <li className="nav-item">
                                 <Link to="/ContectMe" onClick={expendCollaps} className="nav-link" > Contact Me</Link>
                             </li>
+                            <li className="nav-item">
+                                <a  href='pdfs/Resume.pdf' download type='button' className='btn btn-outline-info me-4 ms-2'>Resume</a>
+                            </li>
                             <li className="nav-item swith-item">
-                                <div className="form-check form-switch">
+                                <div className="form-check form-switch ">
                                     <input className="form-check-input" type="checkbox" onClick={toggleTheme} role="switch" id="flexSwitchCheckChecked"  defaultChecked />
                                 </div>
                             </li>

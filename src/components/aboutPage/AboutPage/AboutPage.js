@@ -16,14 +16,12 @@ export default function AboutPage({themeIndex}) {
     ]
     const certificate = ["photos/certificate/python_linkein.png",
         "photos/certificate/python5secrets.png",
-        "photos/certificate/python_marvadi.png",
         "photos/certificate/ibm_data_science.png",
         "photos/certificate/gameDevelopment.png",
         "photos/certificate/crowdsourse.png",
         "photos/certificate/codeSprit1.png",
         "photos/certificate/google_30days.png",
         "photos/certificate/Ide_cp.png",
-        "photos/certificate/online_programing.png",
         "photos/certificate/sk.png"]
     return (
         <div className={`AboutPage p-3 ${aboutTheme[themeIndex].bgcolor} ${aboutTheme[themeIndex].textColor} `}>
@@ -125,7 +123,13 @@ export default function AboutPage({themeIndex}) {
                                             <th scope="row">4</th>
                                             <td>4<sup>th</sup></td>
                                             <td>8.61</td>
-                                            <td>8.87s</td>
+                                            <td>8.87</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">5</th>
+                                            <td>5<sup>th</sup></td>
+                                            <td>8.52</td>
+                                            <td>8.8</td>
                                         </tr>
                                     </tbody>
                                 </table>
@@ -137,7 +141,7 @@ export default function AboutPage({themeIndex}) {
                     <div className={`accordion-item ${aboutTheme[themeIndex].bgcolor} ${aboutTheme[themeIndex].textColor}`} >
                         <h2 className="accordion-header" id="flush-headingThree">
                             <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-                                <h2>Honbies 👨‍🎨</h2>
+                                <h2>Hobby 👨‍🎨</h2>
                             </button>
                         </h2>
                         <div id="flush-collapseThree" className="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">

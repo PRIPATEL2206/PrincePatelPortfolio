@@ -18,8 +18,10 @@ export default function ContectPage({themeIndex}) {
       <h1>Contect Me </h1>
         <div className="contectBoxContainer">
           <div className="contectBox">
-            <img src="photos/icons/gmail.png" alt="gmail logo" className='contectLogo' />
+            <a href="mailto:pr63547890@gecg28.ac.in">
+            <img src="photos/icons/gmail.png" alt="gmail logo" className='contectLogo' /> </a> 
             <h3> Pr63547890@gecg28.ac.in </h3>
+             
           </div>
           <div className="contectBox">
             <img src="photos/icons/whatsapp.png" alt="Whatsapp logo" className='contectLogo' />

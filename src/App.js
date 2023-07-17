@@ -14,32 +14,33 @@ import {
 import Services from './components/services/Services/Services';
 import { useState } from 'react';
 
-// "homepage": "http://PRIPATEL2206.github.io/PrincePatelPortfolio",
+//  "homepage": "http://PRIPATEL2206.github.io/PrincePatelPortfolio",
 // photos/
 
 function App() {
 
-  const [themeIndex,setThemeIndex]=useState(0);
+  const [themeIndex, setThemeIndex] = useState(0);
 
-  const changeThemeIndex =(index)=>{
-        if(themeIndex!==index){
-          setThemeIndex(index);
-        }
+  const changeThemeIndex = (index) => {
+    if (themeIndex !== index) {
+      setThemeIndex(index);
+    }
   }
   return (
     <div className="App">
-     
+
       <HashRouter  >
-        <NavBar themeIndex={themeIndex} changeThemeIndex={changeThemeIndex}/>
+        <NavBar themeIndex={themeIndex} changeThemeIndex={changeThemeIndex} />
+
         <Routes >
           <Route path='/' element={<HomePage themeIndex={themeIndex} />}> </Route>
-          <Route exact path='/About' element={<AboutPage themeIndex={themeIndex}/>}> </Route>
-          <Route exact path='/Skill&Tools' element={<SkillsAndToolsPage themeIndex={themeIndex}/>}> </Route>
-          <Route exact path='/Projects' element={<ProjectPage themeIndex={themeIndex}/>}> </Route>
-          <Route exact path='/Services' element={<Services themeIndex={themeIndex}/>}> </Route>
-          <Route exact path='/ContectMe' element={<ContectPage themeIndex={themeIndex}/>}> </Route>
+          <Route exact path='/About' element={<AboutPage themeIndex={themeIndex} />}> </Route>
+          <Route exact path='/Skill&Tools' element={<SkillsAndToolsPage themeIndex={themeIndex} />}> </Route>
+          <Route exact path='/Projects' element={<ProjectPage themeIndex={themeIndex} />}> </Route>
+          <Route exact path='/Services' element={<Services themeIndex={themeIndex} />}> </Route>
+          <Route exact path='/ContectMe' element={<ContectPage themeIndex={themeIndex} />}> </Route>
         </Routes >
-        <Footer themeIndex={themeIndex}/>
+        <Footer themeIndex={themeIndex} />
       </HashRouter>
     </div>
   );
