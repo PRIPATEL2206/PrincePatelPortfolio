@@ -1,4 +1,3 @@
-
 .infoBox {
     padding-top: 10vh;
     padding-bottom: 10vh;
@@ -15,14 +14,7 @@
     width: min(550px, 90vw);
 }
 
-.link{
-    text-decoration: none;
-    color: black;
-}
 
-.link:hover{
-    background-color:lightseagreen;
-}
 .right-box {
 
     /* width: min(650px, 90%); */
@@ -57,7 +49,7 @@
 }
 
 .skillInfo::before {
-    content:"Web Developer" ;
+    content: "Web Developer";
     border: 2px solid black;
     padding: 3px 5px;
     transition: all ease-in-out 1s;
@@ -65,16 +57,17 @@
 }
 
 @keyframes skill {
-0%{
-    content: "Web Developer";
-}
-34%{
-    content: "App Developer";
-}
+    0% {
+        content: "Web Developer";
+    }
 
-67%{
-    content: "Game Developer";
-}
+    34% {
+        content: "App Developer";
+    }
+
+    67% {
+        content: "Game Developer";
+    }
 }
 
 .collegeInfo {
@@ -89,13 +82,14 @@
 .visually-hidden {
     color: transparent;
 }
-.tf-3{
+
+.tf-3 {
 
     font-size: 15px;
 }
 
 @media screen and (max-width:600px) {
-    .profilePhoto{
+    .profilePhoto {
         width: 310px;
     }
 }
