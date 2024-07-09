@@ -17,7 +17,7 @@ export default function HomePage({ themeIndex }) {
     ]
     return (
 
-        <div className={`vh-100 home-page position-relative ${homeTheme[themeIndex].bgcolor} ${homeTheme[themeIndex].textColor}`}>
+        <div className={`home-page position-relative ${homeTheme[themeIndex].bgcolor} ${homeTheme[themeIndex].textColor}`}>
             <div className="infoBox">
                 <div className="left-box">
                     <h1 className='greeting'>Hi , </h1>
