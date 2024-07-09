@@ -22,12 +22,13 @@ import flutterIcon from "@/assets/photos/appDevelopment/flutter.png"
 
 
 import React, { useEffect, useState } from "react";
-import { InfiniteMovingCards } from "./components/cards/infinite-moving-cards";
 import { LinkPreview } from "./components/ui/link-preview";
 import { ParallaxScrollImages } from "./components/ui/paralel-scroll-images";
 import { TypewriterEffectSmooth } from "./components/ui/smooth-type-writer-efect";
 import { TracingBeam } from "./components/ui/traking-beem";
 import { AnimatedTooltip } from "./components/ui/animated-tooltip";
+import InfiniteMovingCard from "./components/cards/infinite-moing-animation";
+import { InfiniteMovingAnimation } from "./components/ui/infinite-moving-animation";
 
 
 export default function Home() {
@@ -53,7 +54,7 @@ export default function Home() {
       name: "10th",
       title: "Percentage : 72.16 %	",
       title2: "Percentile Rank : 88.54",
-      year:"2018"
+      year: "2018"
 
     },
     {
@@ -62,7 +63,7 @@ export default function Home() {
       name: "12th Science",
       title: "Percentage : 76.83 %	",
       title2: "Percentile Rank : 96.85	",
-      year:"2020"
+      year: "2020"
     },
     {
       quote:
@@ -70,10 +71,10 @@ export default function Home() {
       name: "BE Information Technology",
       title: "Percentage : 76.83 %	",
       title2: "Percentile Rank : 96.85	",
-      year:"2024"
+      year: "2024"
 
     },
-    
+
   ];
 
   const images = [
@@ -142,32 +143,40 @@ export default function Home() {
       className: "text-blue-500 dark:text-blue-500",
     },
   ];
-  const people = [
+  const langvages = [
     {
       id: 1,
-      name: "John Doe",
+      name: "Python",
       designation: "Software Engineer",
-      image:pythonIcon
+      image: pythonIcon
     },
     {
       id: 2,
-      name: "Robert Johnson",
+      name: "Java",
       designation: "Product Manager",
-      image:javaIcon
+      image: javaIcon
     },
     {
       id: 3,
-      name: "Jane Smith",
+      name: "C",
       designation: "Data Scientist",
-      image:cIcon    },
+      image: cIcon
+    },
     {
       id: 4,
-      name: "Emily Davis",
+      name: "Dart",
       designation: "UX Designer",
-      image:dartIcon    },
-   
+      image: dartIcon
+    },
+    {
+      id: 5,
+      name: "JS",
+      designation: "UX Designer",
+      image: jsIcon
+    },
+
   ];
-   
+
 
   const [complated, setComplated] = useState(0);
   useEffect(() => {
@@ -175,35 +184,41 @@ export default function Home() {
       setComplated(pre => pre + 1)
       console.log(complated)
     }, 3700)
-   
+
   }, []);
   return (<>
     <div className=" bg-black w-full overflow-hidden dark">
       <FloatingNav navItems={navItems} />
       <TracingBeam className="px-6">
         <div className="w-full h-lvh content-center">
-        <span className="dark:text-gray-700  dark:text-2xl ">About</span>
-          <TypewriterEffectSmooth words={introWords}  />
-          {complated > 0 && <TypewriterEffectSmooth words={domainWords}  />}
+          <span className="dark:text-gray-700  dark:text-2xl ">About</span>
+          <TypewriterEffectSmooth words={introWords} />
+          {complated > 0 && <TypewriterEffectSmooth words={domainWords} />}
         </div>
         <div className="w-full h-lvh content-center">
-        <span className="text-gray-700 text-2xl ">Education Background</span>
-        <div className="h-[40rem] rounded-md flex flex-col antialiased bg-white dark:bg-black dark:bg-grid-white/[0.05] items-center justify-center relative overflow-hidden">
-          <InfiniteMovingCards
-            items={testimonials}
-            direction="left"
-            speed="normal"
-          />
+          <span className="text-gray-700 text-2xl ">Education Background</span>
+          <div className="h-[40rem] rounded-md flex flex-col antialiased bg-white dark:bg-black dark:bg-grid-white/[0.05] items-center justify-center relative overflow-hidden">
+            <InfiniteMovingCard
+              items={testimonials}
+            />
+          </div>
         </div>
+        <div className="w-full content-center">
+          <span className="dark:text-gray-700  text-2xl">Skill & Tools</span>
+          <InfiniteMovingAnimation >
+
+              {langvages.map((langvage)=><div className="mt-20">
+
+              <AnimatedTooltip items={[langvage]} />
+              </div>
+            )}
+          </InfiniteMovingAnimation>
         </div>
-        <div className="flex flex-row items-center justify-center mb-10 w-full">
-      <AnimatedTooltip items={people} />
-    </div>
-        <AnimatedPinCard /> 
+        <AnimatedPinCard />
         <ThreeDCard />
 
 
-       
+
         <div className="flex justify-center items-center h-[40rem] flex-col px-4">
           <p className="text-neutral-500 dark:text-neutral-400 text-xl md:text-3xl max-w-3xl mx-auto mb-10">
             <LinkPreview url="https://tailwindcss.com" className="font-bold">
