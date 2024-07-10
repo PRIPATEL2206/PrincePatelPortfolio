@@ -9,26 +9,35 @@ import cIcon from "@/assets/photos/programing/c.png"
 import dartIcon from "@/assets/photos/programing/dart.png"
 import javaIcon from "@/assets/photos/programing/java.png"
 import pythonIcon from "@/assets/photos/programing/python.png"
+import jsIcon from "@/assets/photos/programing/jsIcon.png"
 
 import css3Icon from "@/assets/photos/webDevelopment/css-3.png"
 import djangoIcon from "@/assets/photos/webDevelopment/django.png"
 import htmlIcon from "@/assets/photos/webDevelopment/html-5.png"
-import jsIcon from "@/assets/photos/webDevelopment/java-script.png"
 import reactIcon from "@/assets/photos/webDevelopment/react.png"
 import nextjsIcon from "@/assets/photos/webDevelopment/nextjs.png"
 import springbootIcon from "@/assets/photos/webDevelopment/springboot.png"
 
 import flutterIcon from "@/assets/photos/appDevelopment/flutter.png"
+import numpyIcon from "@/assets/photos/frameWorks/numpyIcon.png"
+import pandasIcon from "@/assets/photos/frameWorks/pandas.png"
+import tensoreflowIcon from "@/assets/photos/frameWorks/tensoreflowIcon.png"
+import dockerIcon from "@/assets/photos/frameWorks/dockerIcon.png"
+
+import githubIcon from "@/assets/photos/icons/gitHubIcon.png"
+import linkedinIcon from "@/assets/photos/icons/linkedinIcon.png"
+
+import testImage from "@/images/download.jpg"
 
 
 import React, { useEffect, useState } from "react";
-import { LinkPreview } from "./components/ui/link-preview";
-import { ParallaxScrollImages } from "./components/ui/paralel-scroll-images";
 import { TypewriterEffectSmooth } from "./components/ui/smooth-type-writer-efect";
 import { TracingBeam } from "./components/ui/traking-beem";
 import { AnimatedTooltip } from "./components/ui/animated-tooltip";
 import InfiniteMovingCard from "./components/cards/infinite-moing-animation";
 import { InfiniteMovingAnimation } from "./components/ui/infinite-moving-animation";
+import Image from "next/image";
+import FlotingSideBar from "./components/navbar/floting-side-bar";
 
 
 export default function Home() {
@@ -47,7 +56,7 @@ export default function Home() {
     },
   ];
 
-  const testimonials = [
+  const educationBackground = [
     {
       quote:
         "completed my secondary  education at I.M.J. Savrva Vidhyalay at Balol. Then i had decided to take science with math.",
@@ -128,19 +137,19 @@ export default function Home() {
 
     {
       text: "AI/Ml Engineer",
-      className: "text-blue-500 dark:text-blue-500",
+      className: "text-blue-500 ",
     },
     {
       text: "Game Developer",
-      className: "text-blue-500 dark:text-blue-500",
+      className: "text-blue-500 ",
     },
     {
       text: "Web Developer",
-      className: "text-blue-500 dark:text-blue-500",
+      className: "text-blue-500 ",
     },
     {
       text: "App Developer",
-      className: "text-blue-500 dark:text-blue-500",
+      className: "text-blue-500 ",
     },
   ];
   const langvages = [
@@ -172,9 +181,102 @@ export default function Home() {
       id: 5,
       name: "JS",
       designation: "UX Designer",
-      image: jsIcon
+      image: jsIcon,
+    },
+    {
+      id: 6,
+      name: "HTML",
+      designation: "UX Designer",
+      image: htmlIcon,
+    },
+    {
+      id: 7,
+      name: "CSS",
+      designation: "UX Designer",
+      image: css3Icon,
     },
 
+  ];
+  const framworks = [
+    {
+      id: 1,
+      name: "Flutter",
+      designation: "Software Engineer",
+      image: flutterIcon
+    },
+    {
+      id: 2,
+      name: "React",
+      designation: "Product Manager",
+      image: reactIcon
+    },
+    {
+      id: 3,
+      name: "Next js",
+      designation: "Product Manager",
+      image: nextjsIcon
+    },
+    {
+      id: 4,
+      name: "Django",
+      designation: "Data Scientist",
+      image: djangoIcon
+    },
+    {
+      id: 5,
+      name: "Sprin Boot",
+      designation: "UX Designer",
+      image: springbootIcon
+    },
+
+    {
+      id: 6,
+      name: "Numpy",
+      designation: "UX Designer",
+      image: numpyIcon,
+    },
+    {
+      id: 7,
+      name: "Pandas",
+      designation: "UX Designer",
+      image: pandasIcon,
+    },
+    {
+      id: 8,
+      name: "Tensoreflow",
+      designation: "UX Designer",
+      image: tensoreflowIcon
+    },
+    {
+      id: 9,
+      name: "Docker",
+      designation: "UX Designer",
+      image: dockerIcon
+    },
+    {
+      id: 10,
+      name: "Github",
+      designation: "UX Designer",
+      image: githubIcon
+    },
+
+  ];
+
+  const projects = [
+    [
+      {
+        linkTitle: "github",
+        link: "github.io",
+        title: "potato desis clasification",
+        about: "potato desis clasification",
+        image: testImage
+      }
+    ]
+  ];
+
+  const eperiences = [
+    {},
+    {}
   ];
 
 
@@ -189,59 +291,90 @@ export default function Home() {
   return (<>
     <div className=" bg-black w-full overflow-hidden dark">
       <FloatingNav navItems={navItems} />
+      <FlotingSideBar icons={[
+        {
+          icon:githubIcon,
+          alt:"git",
+          to:"https://github.com/PRIPATEL2206?tab=repositories"
+        },
+        {
+          icon:linkedinIcon,
+          alt:"linked",
+          to:"https://www.linkedin.com/in/prince-patel-7900b8212"
+        }
+      ]} />
       <TracingBeam className="px-6">
         <div className="w-full h-lvh content-center">
           <span className="dark:text-gray-700  dark:text-2xl ">About</span>
           <TypewriterEffectSmooth words={introWords} />
           {complated > 0 && <TypewriterEffectSmooth words={domainWords} />}
+          <div className="mt-24">
+            <p className="text-neutral-500 dark:text-neutral-400 text-xl md:text-3xl max-w-3xl  mb-10">
+              I'm always passionate to know new technologies how they are solving real life problems.
+            </p>
+            <p className="text-neutral-500 dark:text-neutral-400 text-xl md:text-3xl max-w-3xl ">
+              I always love to meet new people collaborate with them and sharing idea with them.
+            </p>
+          </div>
         </div>
         <div className="w-full h-lvh content-center">
           <span className="text-gray-700 text-2xl ">Education Background</span>
           <div className="h-[40rem] rounded-md flex flex-col antialiased bg-white dark:bg-black dark:bg-grid-white/[0.05] items-center justify-center relative overflow-hidden">
             <InfiniteMovingCard
-              items={testimonials}
+              items={educationBackground}
             />
+          </div>
+        </div>
+        <div className="w-full py-10">
+          <span className="dark:text-gray-700  text-2xl">Experience</span>
+          <div className="flex gap-10 flex-wrap justify-evenly">
+
+            {eperiences.map((eperience,i) =>
+            <div id={""+i}>
+              <ThreeDCard  />
+            </div>
+            )}
           </div>
         </div>
         <div className="w-full content-center">
           <span className="dark:text-gray-700  text-2xl">Skill & Tools</span>
-          <InfiniteMovingAnimation >
+          <InfiniteMovingAnimation direction="left" >
 
-              {langvages.map((langvage)=><div className="mt-20">
+            {langvages.map((langvage,i) => 
+            <div className="mt-20" id={""+i}>
 
               <AnimatedTooltip items={[langvage]} />
-              </div>
+            </div>
+            )}
+          </InfiniteMovingAnimation>
+          <InfiniteMovingAnimation direction="right">
+
+            {framworks.map((framwork,i) => 
+            <div className="mt-20" id={""+i}>
+
+              <AnimatedTooltip items={[framwork]} />
+            </div>
             )}
           </InfiniteMovingAnimation>
         </div>
-        <AnimatedPinCard />
-        <ThreeDCard />
+        <div className="mt-32">
+          <span className="dark:text-gray-700  text-2xl">Projects</span>
 
+          {
+            projects.map((projectbatch,i) =>
+              <div className="flex" id={""+i}>
 
+                {projectbatch.map(project => <AnimatedPinCard project={project} />)}
+              </div>
 
-        <div className="flex justify-center items-center h-[40rem] flex-col px-4">
-          <p className="text-neutral-500 dark:text-neutral-400 text-xl md:text-3xl max-w-3xl mx-auto mb-10">
-            <LinkPreview url="https://tailwindcss.com" className="font-bold">
-              Tailwind CSS
-            </LinkPreview>{" "}
-            and{" "}
-            <LinkPreview url="https://framer.com/motion" className="font-bold">
-              Framer Motion
-            </LinkPreview>{" "}
-            are a great way to build modern websites.
-          </p>
-          <p className="text-neutral-500 dark:text-neutral-400 text-xl md:text-3xl max-w-3xl mx-auto">
-            Visit{" "}
-            <LinkPreview
-              url="https://ui.aceternity.com"
-              className="font-bold bg-clip-text text-transparent bg-gradient-to-br from-purple-500 to-pink-500"
-            >
-              Aceternity UI
-            </LinkPreview>{" "}
-            for amazing Tailwind and Framer Motion components.
-          </p>
+            )
+          }
         </div>
-        <ParallaxScrollImages images={images} />
+
+
+
+
+        {/* <ParallaxScrollImages images={images} /> */}
 
       </TracingBeam>
     </div>
