@@ -13,7 +13,7 @@ function ExperienceScreen() {
           <div className="flex gap-10 flex-wrap justify-evenly">
 
             {eperiences.map((eperience,i) =>
-            <div id={""+i}>
+            <div key={""+i}>
               <ThreeDCard  />
 
             </div>

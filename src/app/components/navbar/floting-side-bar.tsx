@@ -13,8 +13,8 @@ function FlotingSideBar({
 }) {
     return (
         <div className="fixed bottom-0 left-24 -translate-x-1/2 flex flex-col justify-center items-center pt-10 rounded-t-3xl">
-            {icons.map(icon =>
-                <a href={icon.to}>
+            {icons.map((icon,id) =>
+                <a href={icon.to} key={""+id}>
                     <Image alt="" width={50} height={50} src={icon.icon} className="m-0.5" />
                     </a>
             )}

@@ -141,7 +141,7 @@ function SkillsAndToolsScreen() {
           <InfiniteMovingAnimation direction="left" >
 
             {langvages.map((langvage,i) => 
-            <div className="mt-20" id={""+i}>
+            <div className="mt-20" key={""+i}>
 
               <AnimatedTooltip items={[langvage]} />
             </div>
@@ -150,7 +150,7 @@ function SkillsAndToolsScreen() {
           <InfiniteMovingAnimation direction="right">
 
             {framworks.map((framwork,i) => 
-            <div className="mt-20" id={""+i}>
+            <div className="mt-20" key={""+i}>
 
               <AnimatedTooltip items={[framwork]} />
             </div>

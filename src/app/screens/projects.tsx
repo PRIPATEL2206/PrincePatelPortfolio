@@ -24,9 +24,9 @@ function Projects() {
 
       {
         projects.map((projectbatch, i) =>
-          <div className="flex" id={"" + i}>
+          <div className="flex" key={"" + i}>
 
-            {projectbatch.map(project => <AnimatedPinCard project={project} />)}
+            {projectbatch.map((project,id) => <AnimatedPinCard project={project} key={""+id} />)}
 
           </div>
 

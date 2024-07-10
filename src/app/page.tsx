@@ -8,9 +8,11 @@ import About from "./screens/about";
 import ExperienceScreen from "./screens/experienceScreen";
 import SkillsAndToolsScreen from "./screens/skillsAndTools";
 import Projects from "./screens/projects";
+import FlotingThemChanger from "./components/navbar/floting-them-changer";
+import { SetStateAction, useState } from "react";
 
 export default function Home() {
-
+ const [isDark,setIsDark]= useState(true);
 
   // const images = [
   //   "@/images/download.jpg",
@@ -48,9 +50,12 @@ export default function Home() {
   // ];
 
 
-
-  return (<>
-    <div className=" bg-black w-full overflow-hidden dark">
+console.log(isDark);
+const setmode=(isDark:SetStateAction<boolean>)=>setIsDark(isDark)
+  return (
+    <div className={`w-full overflow-hidden ${"bg-black dark"?isDark:""}`}>
+    <p className="text-black text-lg">{0?isDark:1}</p>  
+      <FlotingThemChanger setIsDark={setmode}/>
       <Navbar />
       <FlotingSocialMedia />
       <TracingBeam className="px-6">
@@ -62,7 +67,5 @@ export default function Home() {
         {/* <ParallaxScrollImages images={images} /> */}
       </TracingBeam>
     </div>
-
-  </>
   );
 }

@@ -6,7 +6,8 @@ import { StaticImport } from "next/dist/shared/lib/get-img-props";
 
 export function AnimatedPinCard(
   {
-    project
+    project,
+    key
   }: {
 
     project:{linkTitle:string;
@@ -14,11 +15,12 @@ export function AnimatedPinCard(
     title:string;
     about:string;
     image:StaticImport | string
-  }
+  },
+  key?:string
   }
 ) {
   return (
-    <div className="h-[40rem] w-full flex items-center justify-center ">
+    <div className="h-[40rem] w-full flex items-center justify-center " key={key}>
       <PinContainer
         title= {project.linkTitle}
         href={project.link}
