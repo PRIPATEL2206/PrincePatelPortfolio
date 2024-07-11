@@ -62,7 +62,7 @@ const setmode=(isDark:SetStateAction<boolean>)=>setIsDark(isDark)
         <EducationScreen />
         <ExperienceScreen />
         <SkillsAndToolsScreen />
-        <Projects />
+        {/* <Projects /> */}
         {/* <ParallaxScrollImages images={images} /> */}
       </TracingBeam>
     </div>
