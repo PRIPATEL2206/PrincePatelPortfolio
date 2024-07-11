@@ -53,8 +53,8 @@ export default function Home() {
 console.log(isDark);
 const setmode=(isDark:SetStateAction<boolean>)=>setIsDark(isDark)
   return (
-    <div className={`w-full overflow-hidden ${isDark?"bg-black dark":""}`}>
-      <FlotingThemChanger setIsDark={setmode} isDark={isDark}/>
+    <div className={`w-full overflow-hidden text-white ${isDark?"bg-black dark":""}`}>
+      {/* <FlotingThemChanger setIsDark={setmode} isDark={isDark}/>
       <Navbar />
       <FlotingSocialMedia />
       <TracingBeam className="px-6">
@@ -62,9 +62,10 @@ const setmode=(isDark:SetStateAction<boolean>)=>setIsDark(isDark)
         <EducationScreen />
         <ExperienceScreen />
         <SkillsAndToolsScreen />
-        {/* <Projects /> */}
-        {/* <ParallaxScrollImages images={images} /> */}
-      </TracingBeam>
+        <Projects />
+        <ParallaxScrollImages images={images} />
+      </TracingBeam> */}
+      ok
     </div>
   );
 }
