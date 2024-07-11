@@ -30,43 +30,43 @@ function SkillsAndToolsScreen() {
     {
       id: 1,
       name: "Python",
-      designation: "Software Engineer",
+      designation: "",
       image: pythonIcon
     },
     {
       id: 2,
       name: "Java",
-      designation: "Product Manager",
+      designation: "",
       image: javaIcon
     },
     {
       id: 3,
       name: "C",
-      designation: "Data Scientist",
+      designation: "",
       image: cIcon
     },
     {
       id: 4,
       name: "Dart",
-      designation: "UX Designer",
+      designation: "",
       image: dartIcon
     },
     {
       id: 5,
       name: "JS",
-      designation: "UX Designer",
+      designation: "",
       image: jsIcon,
     },
     {
       id: 6,
       name: "HTML",
-      designation: "UX Designer",
+      designation: "",
       image: htmlIcon,
     },
     {
       id: 7,
       name: "CSS",
-      designation: "UX Designer",
+      designation: "",
       image: css3Icon,
     },
 
@@ -75,68 +75,68 @@ function SkillsAndToolsScreen() {
     {
       id: 1,
       name: "Flutter",
-      designation: "Software Engineer",
+      designation: "",
       image: flutterIcon
     },
     {
       id: 2,
       name: "React",
-      designation: "Product Manager",
+      designation: "",
       image: reactIcon
     },
     {
       id: 3,
       name: "Next js",
-      designation: "Product Manager",
+      designation: "",
       image: nextjsIcon
     },
     {
       id: 4,
       name: "Django",
-      designation: "Data Scientist",
+      designation: "",
       image: djangoIcon
     },
     {
       id: 5,
       name: "Sprin Boot",
-      designation: "UX Designer",
+      designation: "",
       image: springbootIcon
     },
 
     {
       id: 6,
       name: "Numpy",
-      designation: "UX Designer",
+      designation: "",
       image: numpyIcon,
     },
     {
       id: 7,
       name: "Pandas",
-      designation: "UX Designer",
+      designation: "",
       image: pandasIcon,
     },
     {
       id: 8,
       name: "Tensoreflow",
-      designation: "UX Designer",
+      designation: "",
       image: tensoreflowIcon
     },
     {
       id: 9,
       name: "Docker",
-      designation: "UX Designer",
+      designation: "",
       image: dockerIcon
     },
     {
       id: 10,
       name: "Github",
-      designation: "UX Designer",
+      designation: "",
       image: githubIcon
     },
 
   ];
   return (
-    <div className="w-full content-center" id="skill&tools">
+    <div className="w-full content-center mt-10" id="skill&tools">
           <span className="dark:text-gray-700  text-2xl">Skill & Tools</span>
           <InfiniteMovingAnimation direction="left" >
 

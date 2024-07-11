@@ -53,9 +53,8 @@ export default function Home() {
 console.log(isDark);
 const setmode=(isDark:SetStateAction<boolean>)=>setIsDark(isDark)
   return (
-    <div className={`w-full overflow-hidden ${"bg-black dark"?isDark:""}`}>
-    <p className="text-black text-lg">{0?isDark:1}</p>  
-      <FlotingThemChanger setIsDark={setmode}/>
+    <div className={`w-full overflow-hidden ${isDark?"bg-black dark":""}`}>
+      <FlotingThemChanger setIsDark={setmode} isDark={isDark}/>
       <Navbar />
       <FlotingSocialMedia />
       <TracingBeam className="px-6">

@@ -9,8 +9,8 @@ function ExperienceScreen() {
   ];
   return (
     <div className="w-full py-10" id="experience">
-          <span className="dark:text-gray-700  text-2xl">Experience</span>
-          <div className="flex gap-10 flex-wrap justify-evenly">
+          <span className="mt-10  dark:text-gray-700  text-2xl">Experience</span>
+          <div className="mt-20 flex gap-10 flex-wrap justify-evenly">
 
             {eperiences.map((eperience,i) =>
             <div key={""+i}>
