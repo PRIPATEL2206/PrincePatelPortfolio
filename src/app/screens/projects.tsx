@@ -11,9 +11,40 @@ function Projects() {
         linkTitle: "github",
         link: "github.io",
         title: "potato desis clasification",
+        about: "predicting the Disease of plants using computer vision(CNN) by using a Deep learning framework TensorFlow, Keras.",
+        image: testImage
+      },
+      {
+        linkTitle: "github",
+        link: "github.io",
+        title: "Integrated Sales and Customer Management System",
         about: "potato desis clasification",
         image: testImage
-      }
+      },
+    ],
+    [{
+      linkTitle: "github",
+      link: "github.io",
+      title: "Integrated Sales and Customer Management System",
+      about: "The system will include features such as item, Sales employee and customer masters, an intuitive order management process.",
+      image: testImage
+    },
+    {
+      linkTitle: "github",
+      link: "github.io",
+      title: "Real Time Chat Application",
+      about: "Implemented features such as text messaging, group chats, and user authentication",
+      image: testImage
+    },
+    ],
+    [
+      {
+        linkTitle: "github",
+        link: "github.io",
+        title: "Online Two Player Chess Application ",
+        about: "Allowing users to compete against friends remotely. Implemented user authentication and secure data storage using Firebase Firestore",
+        image: testImage
+      },
     ]
   ];
 
@@ -26,7 +57,7 @@ function Projects() {
         projects.map((projectbatch, i) =>
           <div className="flex" key={"" + i}>
 
-            {projectbatch.map((project,id) => <AnimatedPinCard project={project} key={""+id} />)}
+            {projectbatch.map((project, id) => <AnimatedPinCard project={project} key={"" + id} />)}
 
           </div>
 

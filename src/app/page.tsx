@@ -65,7 +65,6 @@ const setmode=(isDark:SetStateAction<boolean>)=>setIsDark(isDark)
         <Projects />
         {/* <ParallaxScrollImages images={images} /> */}
       </TracingBeam>
-      ok
     </div>
   );
 }
