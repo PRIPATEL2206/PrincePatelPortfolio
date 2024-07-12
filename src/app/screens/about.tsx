@@ -48,6 +48,9 @@ function About() {
   return (
     <div className="w-full h-lvh content-center">
     <span className="dark:text-gray-700  dark:text-2xl ">About</span>
+    <br />
+    <br />
+    <span className="dark:text-gray-400  dark:text-5xl ">Hey</span>
     <TypewriterEffectSmooth words={introWords} />
     {complated > 0 && <TypewriterEffectSmooth words={domainWords} />}
     <div className="mt-24">
