@@ -27,7 +27,7 @@ function Navbar() {
 
     ];
     return (
-        <FloatingNav navItems={navItems} />
+        <FloatingNav className='w-full' navItems={navItems} />
     )
 }
 

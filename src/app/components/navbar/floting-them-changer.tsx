@@ -12,7 +12,7 @@ function FlotingThemChanger({
 
 }) {
     return (
-        <div className="fixed right-3 top-3 border p-2 rounded-full cursor-pointer" onClick={()=>setIsDark(pre=>!pre)}>
+        <div className="z-[5000] fixed right-3 top-3 border p-2 rounded-full cursor-pointer" onClick={()=>setIsDark(pre=>!pre)}>
             <Image width={20} height={20} alt='mode' src={isDark ?lightModeIcon : nightModeIcon  } />
         </div>
     )

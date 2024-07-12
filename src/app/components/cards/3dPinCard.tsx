@@ -14,20 +14,20 @@ export function AnimatedPinCard(
       link: string;
       title: string;
       about: string;
-      image: StaticImport | string
+      image: StaticImport | string;
+      technologis:string;
     };
     key: string
   }
 ) {
   return (
-    <div className="h-[25rem] w-full flex items-center justify-center " key={key}>
+    <div className="h-[35rem] w-full flex items-center justify-center " key={key}>
       <PinContainer
         title={project.linkTitle}
         href={project.link}
-  
         otherKey={key}
       >
-        <div className="flex basis-full flex-col p-4 tracking-tight text-slate-100/50 sm:basis-1/2 w-[20rem]  ">
+        <div className="flex basis-full flex-col p-4 tracking-tight text-slate-100/50 sm:basis-1/2 w-[20rem] h-[30rem] ">
           <h3 className="max-w-xs !pb-2 !m-0 font-bold  text-base text-slate-100">
             {project.title}
           </h3>
@@ -35,6 +35,10 @@ export function AnimatedPinCard(
             <span className="text-slate-500 ">
               {project.about}
             </span>
+            <br />
+            {project.technologis && <span className="text-slate-50 mt-10 text-xs">
+              {project.technologis}
+            </span>}
           </div>
           <div className="flex flex-1 w-full rounded-lg mt-4 " >
             <Image src={project.image} alt={project.title} />
