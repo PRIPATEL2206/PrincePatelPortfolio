@@ -9,7 +9,7 @@ import snackGame from "@/assets/photos/projectSS/gameDevolopment/snackWeb.jpg"
 import ticTacGame from "@/assets/photos/projectSS/gameDevolopment/tictactoeWeb.jpg"
 import pPostAppImage from "@/assets/photos/projectSS/appDevolopment/pPost.png"
 import informaticaAppImage   from "@/assets/photos/projectSS/appDevolopment/informaticaApp.png"
-import Game from "@/assets/photos/projectSS/gameDevolopment/tictactoeWeb.jpg"
+import desisClasificationImage from "@/assets/photos/projectSS/ai-ml/desisClasification.png"
 
 
 function Projects() {
@@ -23,7 +23,7 @@ function Projects() {
         link: "https://github.com/PRIPATEL2206/plant_village_datase_decis_classification",
         title: "potato desis clasification",
         about: "predicting the Disease of plants using computer vision(CNN) by using a Deep learning framework TensorFlow, Keras.",
-        image: testImage,
+        image: desisClasificationImage,
         technologis: "Tensoreflow | Fast Api | HTML | CSS | JS "
       },
       {
@@ -120,7 +120,7 @@ function Projects() {
 
       {
         projects.map((projectbatch, i) =>
-          <div className="flex" key={"" + i}>
+          <div className="flex flex-col lg:flex-row" key={"" + i}>
 
             {projectbatch.map((project, id) => <AnimatedPinCard project={project} key={"" + id} />)}
 
@@ -130,7 +130,7 @@ function Projects() {
       }
       {
         isShowMore &&  moreProjects.map((projectbatch, i) =>
-          <div className="flex" key={"" + i}>
+          <div className="flex flex-col lg:flex-row" key={"" + i}>
 
             {projectbatch.map((project, id) => <AnimatedPinCard project={project} key={"" + id} />)}
 
