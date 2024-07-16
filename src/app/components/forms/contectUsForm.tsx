@@ -5,8 +5,7 @@ import { Input } from "./input";
 import { cn } from "@/../utils/cn";
 import {
   IconBrandGithub,
-  IconBrandGoogle,
-  IconBrandOnlyfans,
+  IconMail,
 } from "@tabler/icons-react";
 
 export function ContectForm() {
@@ -15,7 +14,7 @@ export function ContectForm() {
     console.log("Form submitted");
   };
   return (
-    <div className="max-w-3xl w-full mx-auto rounded-none md:rounded-2xl p-4 md:p-8 shadow-input bg-white dark:bg-black">
+    <div className="max-w-3xl w-full mx-auto rounded-none md:rounded-2xl p-4 md:p-8 shadow-input bg-white dark:bg-black" id="contect">
       <h2 className="font-bold text-xl text-neutral-800 dark:text-neutral-200">
         Contect Me
       </h2>
@@ -72,7 +71,7 @@ export function ContectForm() {
             className=" relative group/btn flex space-x-2 items-center justify-start px-4 w-full text-black rounded-md h-10 font-medium shadow-input bg-gray-50 dark:bg-zinc-900 dark:shadow-[0px_0px_1px_1px_var(--neutral-800)]"
             type="submit"
           >
-            <IconBrandGoogle className="h-4 w-4 text-neutral-800 dark:text-neutral-300" />
+            <IconMail className="h-4 w-4 text-neutral-800 dark:text-neutral-300" />
             <span className="text-neutral-700 dark:text-neutral-300 text-sm">
               Mail
             </span>

@@ -23,6 +23,10 @@ function Navbar() {
             name: "Projects",
             link: "#projects",
         },
+        {
+            name: "Contect",
+            link: "#contect",
+        },
 
 
     ];
