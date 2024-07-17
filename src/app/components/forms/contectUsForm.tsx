@@ -16,6 +16,7 @@ export function ContectForm() {
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    console.log(process.env.NEXT_PUBLIC_EMAIL_FORMSPREE)
     const firstname = (e.currentTarget.elements[0] as HTMLInputElement).value;
     const lastname = (e.currentTarget.elements[1] as HTMLInputElement).value;
     const email = (e.currentTarget.elements[2] as HTMLInputElement).value;
