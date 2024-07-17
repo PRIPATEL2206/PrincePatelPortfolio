@@ -1,18 +1,56 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import { Label } from "./label";
 import { Input } from "./input";
 import { cn } from "@/../utils/cn";
 import {
   IconBrandGithub,
+  IconBrandLinkedin,
   IconMail,
 } from "@tabler/icons-react";
+import { useRouter } from "next/navigation";
 
 export function ContectForm() {
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+
+  const router = useRouter()
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    console.log("Form submitted");
+    const firstname = (e.currentTarget.elements[0] as HTMLInputElement).value;
+    const lastname = (e.currentTarget.elements[1] as HTMLInputElement).value;
+    const email = (e.currentTarget.elements[2] as HTMLInputElement).value;
+    const massage = (e.currentTarget.elements[3] as HTMLInputElement).value;
+    if (firstname.length <= 0 || lastname.length <= 0 || email.length <= 0 || massage.length <= 0) {
+      router.push("/error")
+      return;
+    }
+    const formData = {
+      name: firstname + " " + lastname,
+      email: email,
+      message: massage
+    }
+    try {
+      const response = await fetch(process.env.NEXT_PUBLIC_EMAIL_FORMSPREE as string, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(formData)
+      });
+
+      if (response.ok) {
+        // Handle successful form submission (e.g., show a success message)
+        router.push("/thanks")
+      } else {
+        // Handle errors (e.g., show an error message)
+        router.push("/error")
+      }
+    } catch (error) {
+      router.push("/error")
+      // Handle network errors
+    }
   };
+
   return (
     <div className="max-w-3xl w-full mx-auto rounded-none md:rounded-2xl p-4 md:p-8 shadow-input bg-white dark:bg-black" id="contect">
       <h2 className="font-bold text-xl text-neutral-800 dark:text-neutral-200">
@@ -39,8 +77,8 @@ export function ContectForm() {
         </LabelInputContainer>
 
         <LabelInputContainer className="mb-4">
-        <label htmlFor="message" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your message</label>
-        <textarea id="message" rows={4} className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300  dark:bg-gray-900 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white " placeholder="Write your thoughts here..."></textarea>
+          <label htmlFor="message" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your message</label>
+          <textarea id="message" rows={4} className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300  dark:bg-gray-900 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white " placeholder="Write your thoughts here..."></textarea>
         </LabelInputContainer>
 
 
@@ -74,6 +112,18 @@ export function ContectForm() {
             <IconMail className="h-4 w-4 text-neutral-800 dark:text-neutral-300" />
             <span className="text-neutral-700 dark:text-neutral-300 text-sm">
               Mail
+            </span>
+            <BottomGradient />
+          </a>
+
+          <a
+            href="https://www.linkedin.com/in/prince-patel-7900b8212"
+            className=" relative group/btn flex space-x-2 items-center justify-start px-4 w-full text-black rounded-md h-10 font-medium shadow-input bg-gray-50 dark:bg-zinc-900 dark:shadow-[0px_0px_1px_1px_var(--neutral-800)]"
+            type="submit"
+          >
+            <IconBrandLinkedin className="h-4 w-4 text-neutral-800 dark:text-neutral-300" />
+            <span className="text-neutral-700 dark:text-neutral-300 text-sm">
+              LinkedIn
             </span>
             <BottomGradient />
           </a>

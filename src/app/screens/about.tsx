@@ -41,7 +41,6 @@ function About() {
   useEffect(() => {
     setTimeout(() => {
       setComplated(pre => pre + 1)
-      console.log(complated)
     }, 3700)
 
   }, []);

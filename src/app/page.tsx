@@ -51,7 +51,6 @@ export default function Home() {
   // ];
 
 
-  console.log(isDark);
   const setmode = (isDark: SetStateAction<boolean>) => setIsDark(isDark)
   return (
     <div className={`w-full overflow-hidden text-white ${isDark ? "bg-black dark" : ""}`}>
