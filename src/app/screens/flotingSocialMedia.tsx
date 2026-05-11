@@ -12,7 +12,7 @@ function FlotingSocialMedia() {
         {
           icon:cvIcon,
           alt:"CV",
-          to:"/resume1.pdf",
+          to:"/Prince_Patel_Resume.pdf",
           download:true
         },
         {

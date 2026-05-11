@@ -1,145 +1,202 @@
 import React, { useState } from 'react'
+import { motion, AnimatePresence } from 'framer-motion'
 import { AnimatedPinCard } from '../components/cards/3dPinCard'
-import testImage from "@/images/download.jpg"
-import chatAppImage from "@/assets/photos/projectSS/appDevolopment/pChat.png"
-import chessImage from "@/assets/photos/projectSS/gameDevolopment/chessWeb.jpg"
-import crmDjangoImage from "@/assets/photos/projectSS/webDevolopment/crm_django.jpg"
-import quotesImage from "@/assets/photos/projectSS/appDevolopment/quotes.jpg"
-import snackGame from "@/assets/photos/projectSS/gameDevolopment/snackWeb.jpg"
-import ticTacGame from "@/assets/photos/projectSS/gameDevolopment/tictactoeWeb.jpg"
-import pPostAppImage from "@/assets/photos/projectSS/appDevolopment/pPost.png"
-import informaticaAppImage   from "@/assets/photos/projectSS/appDevolopment/informaticaApp.png"
-import desisClasificationImage from "@/assets/photos/projectSS/ai-ml/desisClasification.png"
 
+import chatAppImage          from '@/assets/photos/projectSS/appDevolopment/pChat.png'
+import desisClassificationImg from '@/assets/photos/projectSS/ai-ml/desisClasification.png'
+import crmDjangoImage        from '@/assets/photos/projectSS/webDevolopment/crm_django.jpg'
+import chessImage            from '@/assets/photos/projectSS/gameDevolopment/chessWeb.jpg'
+import quotesImage           from '@/assets/photos/projectSS/appDevolopment/quotes.jpg'
+import snackGame             from '@/assets/photos/projectSS/gameDevolopment/snackWeb.jpg'
+import ticTacGame            from '@/assets/photos/projectSS/gameDevolopment/tictactoeWeb.jpg'
+import pPostAppImage         from '@/assets/photos/projectSS/appDevolopment/pPost.png'
+import informaticaAppImage   from '@/assets/photos/projectSS/appDevolopment/informaticaApp.png'
+
+/* ── Featured projects from resume ── */
+const featuredProjects = [
+  {
+    linkTitle: 'GitHub',
+    link: 'https://github.com/PRIPATEL2206/P-Chat-App',
+    title: 'Scalable Real-Time Chat App',
+    about:
+      'Production-grade messaging system with persistent WebSocket connections, stateless FastAPI backend for horizontal scaling, JWT auth, and PostgreSQL message history.',
+    image: chatAppImage,
+    technologis: 'FastAPI · React · Tailwind CSS · WebSockets · PostgreSQL · JWT',
+    badge: 'Backend',
+  },
+  {
+    linkTitle: 'GitHub',
+    link: 'https://github.com/PRIPATEL2206/st-django-cms-web',
+    title: 'Trust Management System',
+    about:
+      'Multi-role SaaS platform for trust operations — donations, expenses, approvals, member management — with Stripe payments and downloadable analytics reports.',
+    image: crmDjangoImage,
+    technologis: 'Django · PostgreSQL · Tailwind CSS · Stripe',
+    badge: 'Full-Stack',
+  },
+  {
+    linkTitle: 'GitHub',
+    link: 'https://github.com/PRIPATEL2206/plant_village_datase_decis_classification',
+    title: 'Plant Disease Classification',
+    about:
+      'Trained a CNN on leaf images with data augmentation (rotation, flip, zoom) to reduce overfitting; deployed as a FastAPI REST inference endpoint.',
+    image: desisClassificationImg,
+    technologis: 'CNN · TensorFlow · Keras · FastAPI · JavaScript',
+    badge: 'ML / AI',
+  },
+  {
+    linkTitle: 'GitHub',
+    link: 'https://github.com/PRIPATEL2206',
+    title: 'Time-Series Dengue Forecasting',
+    about:
+      'LSTM model for multi-year dengue outbreak prediction with hyperparameter tuning (learning rate, dropout, layers) to improve forecast accuracy over statistical baselines.',
+    image: desisClassificationImg,
+    technologis: 'LSTM · TensorFlow · Pandas · NumPy · Matplotlib',
+    badge: 'ML / AI',
+  },
+]
+
+/* ── Additional / side projects ── */
+const moreProjects = [
+  {
+    linkTitle: 'Play',
+    link: 'https://pripatel2206.github.io/WebProjects/Games/Chass%20Game/index.html',
+    title: 'Web Chess Game',
+    about: 'Browser-based chess game with animations and move validation. Playable online.',
+    image: chessImage,
+    technologis: 'HTML · CSS · JavaScript',
+    badge: 'Game',
+  },
+  {
+    linkTitle: 'GitHub',
+    link: 'https://github.com/PRIPATEL2206/quotes_app',
+    title: 'Quotes App',
+    about: 'Mobile app for discovering and saving quotes by author or keyword search.',
+    image: quotesImage,
+    technologis: 'Flutter',
+    badge: 'Mobile',
+  },
+  {
+    linkTitle: 'GitHub',
+    link: 'https://github.com/PRIPATEL2206/ppost-mobile-app',
+    title: 'PPost — API Client App',
+    about: 'Mobile Postman-like app for testing REST APIs with JSON request body and response view.',
+    image: pPostAppImage,
+    technologis: 'Flutter',
+    badge: 'Mobile',
+  },
+  {
+    linkTitle: 'GitHub',
+    link: 'https://github.com/PRIPATEL2206/Informatica_App',
+    title: 'Yojana Kendra App',
+    about:
+      'SSIP Hackathon project — multi-language app for government scheme discovery with dark mode and search filters.',
+    image: informaticaAppImage,
+    technologis: 'Flutter',
+    badge: 'Mobile',
+  },
+  {
+    linkTitle: 'Play',
+    link: 'https://pripatel2206.github.io/WebProjects/Games/Snack%20Game/index.html',
+    title: 'Web Snake Game',
+    about: 'Classic Nokia snake game in the browser with keyboard and on-screen controls.',
+    image: snackGame,
+    technologis: 'HTML · CSS · JavaScript',
+    badge: 'Game',
+  },
+  {
+    linkTitle: 'Play',
+    link: 'https://pripatel2206.github.io/WebProjects/Games/Cross%20Circule%20Game/index.html',
+    title: 'Web Tic-Tac-Toe',
+    about: 'Two-player tic-tac-toe game built for the browser.',
+    image: ticTacGame,
+    technologis: 'HTML · CSS · JavaScript',
+    badge: 'Game',
+  },
+]
+
+const badgeColor: Record<string, string> = {
+  'ML / AI':    'bg-purple-500/20 text-purple-300 border-purple-500/30',
+  'Backend':    'bg-blue-500/20 text-blue-300 border-blue-500/30',
+  'Full-Stack': 'bg-emerald-500/20 text-emerald-300 border-emerald-500/30',
+  'Game':       'bg-orange-500/20 text-orange-300 border-orange-500/30',
+  'Mobile':     'bg-pink-500/20 text-pink-300 border-pink-500/30',
+}
 
 function Projects() {
+  const [showMore, setShowMore] = useState(false)
 
-  const [isShowMore,setIsShowMore]= useState(false);
-
-  const projects = [
-    [
-      {
-        linkTitle: "github",
-        link: "https://github.com/PRIPATEL2206/plant_village_datase_decis_classification",
-        title: "potato desis clasification",
-        about: "predicting the Disease of plants using computer vision(CNN) by using a Deep learning framework TensorFlow, Keras.",
-        image: desisClasificationImage,
-        technologis: "Tensoreflow | Fast Api | HTML | CSS | JS "
-      },
-      {
-        linkTitle: "github",
-        link: "https://github.com/PRIPATEL2206/st-django-cms-web",
-        title: "Integrated Sales and Customer Management System",
-        about: "The system will include features such as item, Sales employee and customer masters, an intuitive order management process.",
-        image: crmDjangoImage,
-        technologis: "Django | HTML | CSS | JS"
-      },
-    ],
-    [
-      {
-        linkTitle: "github",
-        link: "https://github.com/PRIPATEL2206/P-Chat-App",
-        title: "Real Time Chat Application",
-        about: "Implemented features such as text messaging, group chats, and user authentication",
-        image: chatAppImage,
-        technologis: "Flutter | Firebase"
-      },
-      {
-        linkTitle: "github",
-        link: "https://github.com/PRIPATEL2206/p_chess_app",
-        title: "Online Two Player Chess Application ",
-        about: "Allowing users to compete against friends remotely. Implemented user authentication and secure data storage using Firebase Firestore",
-        image: testImage,
-        technologis: "Flutter | Firebase"
-      },
-    ],
-    [
-      {
-        linkTitle: "Play",
-        link: "https://pripatel2206.github.io/WebProjects/Games/Chass%20Game/index.html",
-        title: "Web Chess Game",
-        about: "This is web base chess game. As i like most to play chess i made one for me.I am working on it and adding more animation an functionality in this game.",
-        image: chessImage,
-        technologis: "HTML | CSS | JS"
-      },
-      {
-        linkTitle: "github",
-        link: "https://github.com/PRIPATEL2206/quotes_app",
-        title: "Quotes App",
-        about: "App Will display new Quotes acording search auther name or ant line of quotes.You can save Quotes Also if you like",
-        image: quotesImage,
-        technologis: "Flutter"
-      },
-    ]
-  ];
-
-  const moreProjects = [
-    [
-      {
-        linkTitle: "github",
-        link: "https://github.com/PRIPATEL2206/ppost-mobile-app",
-        title: "PPost App",
-        about: "PPost is app for sending post, get and some other reqevest like post man.we can send json body with reqevest that requrds. And get respose that will display in bottom",
-        image: pPostAppImage,
-        technologis: "Flutter"
-      },
-      {
-        linkTitle: "github",
-        link: "https://github.com/PRIPATEL2206/Informatica_App",
-        title: "Yojana Kendra APP",
-        about: "This is an app for android as well as ios device. This is also made by me as part of SSIP hackathon. It has multi language support, dark and light mode , search filter for searching of scheme",
-        image: informaticaAppImage,
-        technologis: "Flutter"
-      },
-    ],
-    [
-      {
-        linkTitle: "Play",
-        link: "https://pripatel2206.github.io/WebProjects/Games/Snack%20Game/index.html",
-        title: "Web Snake Game",
-        about: "This is Snake game that we all play in old nokia phones. This is same but in web you can use keybord key as well as controler is given for controlling snake direction.",
-        image: snackGame,
-        technologis: "HTML | CSS | JS "
-      },
-      {
-        linkTitle: "Play",
-        link: "https://pripatel2206.github.io/WebProjects/Games/Cross%20Circule%20Game/index.html",
-        title: "Web tic tac toe Game ",
-        about: "This is one more game that we all play in our school time on paper. I think why we don't use app for playing this game this will reduce pollution also. Than i made this web base game.",
-        image: ticTacGame,
-        technologis: "HTML | CSS | JS"
-      },
-    ],
-    
-  ];
-
+  /* Pair items into rows of 2 for the pin card layout */
+  const chunk = <T,>(arr: T[], size: number): T[][] =>
+    Array.from({ length: Math.ceil(arr.length / size) }, (_, i) =>
+      arr.slice(i * size, i * size + size)
+    )
 
   return (
-    <div className="mt-32 mb-28" id='projects'>
-      <span className="dark:text-gray-700  text-2xl">Projects</span>
+    <section className="w-full py-16 sm:py-24 px-4" id="projects">
+      <div className="max-w-5xl mx-auto">
+        {/* Heading */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="mb-4"
+        >
+          <span className="section-label">Portfolio</span>
+          <h2 className="section-heading">Projects</h2>
+          <p className="text-gray-400 text-sm mt-2 max-w-xl">
+            Featured projects aligned with my ML / Data Engineering specialisation, plus side projects.
+          </p>
+        </motion.div>
 
-      {
-        projects.map((projectbatch, i) =>
-          <div className="flex flex-col lg:flex-row" key={"" + i}>
+        {/* Badge legend */}
+        <div className="flex flex-wrap gap-2 mb-8 mt-4">
+          {Object.entries(badgeColor).map(([label, cls]) => (
+            <span key={label} className={`text-xs px-2 py-0.5 rounded-full border ${cls}`}>{label}</span>
+          ))}
+        </div>
 
-            {projectbatch.map((project, id) => <AnimatedPinCard project={project} key={"" + id} />)}
-
+        {/* Featured project grid */}
+        {chunk(featuredProjects, 2).map((row, i) => (
+          <div key={i} className="flex flex-col lg:flex-row">
+            {row.map((project, j) => (
+              <AnimatedPinCard project={project} key={`${i}-${j}`} />
+            ))}
           </div>
+        ))}
 
-        )
-      }
-      {
-        isShowMore &&  moreProjects.map((projectbatch, i) =>
-          <div className="flex flex-col lg:flex-row" key={"" + i}>
+        {/* More projects toggle */}
+        <div className="mt-4 mb-2">
+          <button
+            onClick={() => setShowMore(p => !p)}
+            className="flex items-center gap-2 text-sm text-gray-400 hover:text-blue-400 transition-colors duration-200 group"
+          >
+            <span>{showMore ? 'Hide extra projects' : 'Show more projects'}</span>
+            <span className="text-xs group-hover:translate-y-0.5 transition-transform">{showMore ? '▲' : '▼'}</span>
+          </button>
+        </div>
 
-            {projectbatch.map((project, id) => <AnimatedPinCard project={project} key={"" + id} />)}
-
-          </div>
-
-        )
-      }
-      <button className='float-end text-gray-500 mt-4' onClick={()=>setIsShowMore(pre=>!pre)}>{isShowMore?"Hide":"More..."}</button>
-    </div>
+        <AnimatePresence>
+          {showMore && (
+            <motion.div
+              initial={{ opacity: 0, height: 0 }}
+              animate={{ opacity: 1, height: 'auto' }}
+              exit={{ opacity: 0, height: 0 }}
+              transition={{ duration: 0.3 }}
+              className="overflow-hidden"
+            >
+              {chunk(moreProjects, 2).map((row, i) => (
+                <div key={i} className="flex flex-col lg:flex-row">
+                  {row.map((project, j) => (
+                    <AnimatedPinCard project={project} key={`more-${i}-${j}`} />
+                  ))}
+                </div>
+              ))}
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </div>
+    </section>
   )
 }
 

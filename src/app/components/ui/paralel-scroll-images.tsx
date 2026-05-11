@@ -2,7 +2,6 @@
 import { useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import { motion } from "framer-motion";
-import Image from "next/image";
 import { cn } from "@/../utils/cn";
 import image from "@/images/download.jpg"
 
@@ -15,8 +14,8 @@ export const ParallaxScrollImages = ({
 }) => {
   const gridRef = useRef<any>(null);
   const { scrollYProgress } = useScroll({
-    container: gridRef, // remove this if your container is not fixed height
-    offset: ["start start", "end start"], // remove this if your container is not fixed height
+    container: gridRef,
+    offset: ["start start", "end start"],
   });
 
   const translateYFirst = useTransform(scrollYProgress, [0, 1], [0, -200]);
@@ -49,14 +48,14 @@ export const ParallaxScrollImages = ({
                 y: translateYFirst,
                 x: translateXFirst,
                 rotateZ: rotateXFirst,
-              }} // Apply the translateY motion value here
+              }}
               key={"grid-1" + idx}
             >
-              <Image
-                src={image}
+              <img
+                src={image as unknown as string}
                 className="h-80 w-full object-cover object-left-top rounded-lg gap-10 !m-0 !p-0"
-                height="400"
-                width="400"
+                height={400}
+                width={400}
                 alt="thumbnail"
               />
             </motion.div>
@@ -65,11 +64,11 @@ export const ParallaxScrollImages = ({
         <div className="grid gap-10">
           {secondPart.map((el, idx) => (
             <motion.div key={"grid-2" + idx}>
-              <Image
-                src={image}
+              <img
+                src={image as unknown as string}
                 className="h-80 w-full object-cover object-left-top rounded-lg gap-10 !m-0 !p-0"
-                height="400"
-                width="400"
+                height={400}
+                width={400}
                 alt="thumbnail"
               />
             </motion.div>
@@ -85,11 +84,11 @@ export const ParallaxScrollImages = ({
               }}
               key={"grid-3" + idx}
             >
-              <Image
-                src={image}
+              <img
+                src={image as unknown as string}
                 className="h-80 w-full object-cover object-left-top rounded-lg gap-10 !m-0 !p-0"
-                height="400"
-                width="400"
+                height={400}
+                width={400}
                 alt="thumbnail"
               />
             </motion.div>

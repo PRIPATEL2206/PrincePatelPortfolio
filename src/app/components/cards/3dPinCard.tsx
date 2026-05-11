@@ -1,8 +1,6 @@
 "use client";
 import React from "react";
 import { PinContainer } from "../ui/3d-pinui";
-import Image from "next/image";
-import { StaticImport } from "next/dist/shared/lib/get-img-props";
 
 export function AnimatedPinCard(
   {
@@ -14,8 +12,8 @@ export function AnimatedPinCard(
       link: string;
       title: string;
       about: string;
-      image: StaticImport | string;
-      technologis:string;
+      image: string;
+      technologis: string;
     };
     key: string
   }
@@ -41,10 +39,8 @@ export function AnimatedPinCard(
             </span>}
           </div>
           <div className="flex  w-full rounded-lg mt-4 object-fill " >
-            <Image src={project.image} alt={project.title} />
+            <img src={project.image} alt={project.title} className="w-full h-full object-cover" />
           </div>
-
-
         </div>
       </PinContainer>
     </div>

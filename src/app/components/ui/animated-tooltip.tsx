@@ -1,5 +1,4 @@
 "use client";
-import Image from "next/image";
 import React, { useState } from "react";
 import {
   motion,
@@ -8,7 +7,6 @@ import {
   useMotionValue,
   useSpring,
 } from "framer-motion";
-import { StaticImport } from "next/dist/shared/lib/get-img-props";
 
 export const AnimatedTooltip = ({
   items,
@@ -17,26 +15,24 @@ export const AnimatedTooltip = ({
     id: number;
     name: string;
     designation: string;
-    image: string | StaticImport;
-    bgColor?:string;
+    image: string;
+    bgColor?: string;
   }[];
 }) => {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
   const springConfig = { stiffness: 100, damping: 5 };
-  const x = useMotionValue(0); // going to set this value on mouse move
-  // rotate the tooltip
+  const x = useMotionValue(0);
   const rotate = useSpring(
     useTransform(x, [-100, 100], [-45, 45]),
     springConfig
   );
-  // translate the tooltip
   const translateX = useSpring(
     useTransform(x, [-100, 100], [-50, 50]),
     springConfig
   );
   const handleMouseMove = (event: any) => {
     const halfWidth = event.target.offsetWidth / 2;
-    x.set(event.nativeEvent.offsetX - halfWidth); // set the x value, which is then used in transform and rotate
+    x.set(event.nativeEvent.offsetX - halfWidth);
   };
 
   return (
@@ -79,14 +75,13 @@ export const AnimatedTooltip = ({
               </motion.div>
             )}
           </AnimatePresence>
-          <Image
+          <img
             onMouseMove={handleMouseMove}
             src={item.image}
             alt={item.name}
             height={80}
             width={80}
             className={`object-center w-20 h-20 p-1 bg-${item.bgColor ?? "white"} dark:bg-${item.bgColor ?? "black"}  object-top rounded-full  border-2 group-hover:scale-105 group-hover:z-30 dark:border-white border-black  relative transition duration-500`}
-
           />
         </div>
       ))}
