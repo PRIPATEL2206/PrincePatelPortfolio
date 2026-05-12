@@ -1,3 +1,48 @@
-.link-icon{
-    width: 40px;
+.pp-footer {
+    padding: 1.25rem 1rem;
+    border-top: 1px solid rgba(128,128,128,0.15);
+}
+
+.footer-dark  { background: #0d0d0d; color: rgba(255,255,255,0.55); }
+.footer-light { background: #f1f3f5; color: rgba(0,0,0,0.55); }
+
+.footer-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+.footer-copy {
+    font-size: 0.82rem;
+}
+
+.footer-copy a {
+    color: var(--accent);
+    text-decoration: none;
+}
+
+.footer-copy a:hover {
+    text-decoration: underline;
+}
+
+.footer-socials {
+    display: flex;
+    gap: 0.75rem;
+    align-items: center;
+}
+
+.footer-icon {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+    opacity: 0.7;
+    transition: opacity 0.2s, transform 0.2s;
+    border-radius: 6px;
+}
+
+.footer-icon:hover {
+    opacity: 1;
+    transform: translateY(-2px);
 }

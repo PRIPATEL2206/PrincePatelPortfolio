@@ -1,28 +1,137 @@
-* {
-  /* scroll-behavior: smooth; */
-}
+/* ── Reset & base ── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
 
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-size: 16px;
+  line-height: 1.6;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+code { font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace; }
+
+img { max-width: 100%; display: block; }
+
+a { text-decoration: none; }
+
+/* ── Scrollbar ── */
+::-webkit-scrollbar { width: 5px; background-color: #0a0a0a; }
+::-webkit-scrollbar-thumb { background-color: #0d6efd; border-radius: 10px; }
+::-webkit-scrollbar-thumb:hover { background-color: #3b82f6; }
+
+/* ── CSS Variables ── */
+:root {
+  --accent:       #0d6efd;
+  --accent-hover: #0b5ed7;
+  --radius-card:  12px;
+  --shadow-card:  0 4px 24px rgba(0,0,0,0.12);
+  --shadow-hover: 0 8px 32px rgba(13,110,253,0.18);
+  --transition:   all 0.25s ease;
 }
 
-::-webkit-scrollbar {
-  width: 2px;
-
-  background-color: rgb(6, 39, 39);
-  border-radius: 10px;
+/* ── Utility: section wrapper ── */
+.pp-section {
+  min-height: 100vh;
+  padding: 2.5rem 1rem 3rem;
+}
+.pp-section-title {
+  font-size: clamp(1.6rem, 4vw, 2.2rem);
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+.pp-section-sub {
+  font-size: 0.8rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+.pp-divider {
+  border: none;
+  border-top: 2px solid var(--accent);
+  opacity: 0.4;
+  margin: 0.4rem 0 1.5rem;
 }
 
-::-webkit-scrollbar-thumb {
-  background-color: #0d6efd;
+/* ── Tech badge ── */
+.tech-badge {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 2px 10px;
+  border-radius: 999px;
+  background: rgba(13,110,253,0.12);
+  color: #6ea8fe;
+  border: 1px solid rgba(13,110,253,0.25);
+  white-space: nowrap;
 }
+
+/* ── Card hover lift ── */
+.pp-card-hover {
+  transition: var(--transition);
+}
+.pp-card-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-hover) !important;
+}
+
+/* ── Responsive grid helpers ── */
+.pp-grid {
+  display: grid;
+  gap: 1.25rem;
+}
+.pp-grid-2 { grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); }
+.pp-grid-3 { grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); }
+.pp-grid-4 { grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); }
+
+@media (max-width: 480px) {
+  .pp-grid-2, .pp-grid-3, .pp-grid-4 {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ── Scroll reveal ── */
+.pp-reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+  will-change: opacity, transform;
+}
+.pp-reveal.pp-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ── Entrance animations (hero / page-load) ── */
+@keyframes ppFadeUp {
+  from { opacity: 0; transform: translateY(26px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes ppScaleIn {
+  from { opacity: 0; transform: scale(0.88); }
+  to   { opacity: 1; transform: scale(1); }
+}
+@keyframes ppFadeLeft {
+  from { opacity: 0; transform: translateX(-22px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+@keyframes ppGlow {
+  0%, 100% { opacity: 0.45; transform: scale(1); }
+  50%       { opacity: 0.80; transform: scale(1.15); }
+}
+
+.pp-anim-up    { animation: ppFadeUp   0.7s ease both; }
+.pp-anim-scale { animation: ppScaleIn  0.75s ease both; }
+.pp-anim-left  { animation: ppFadeLeft 0.65s ease both; }
+
+.pp-d1 { animation-delay: 0.08s; }
+.pp-d2 { animation-delay: 0.18s; }
+.pp-d3 { animation-delay: 0.28s; }
+.pp-d4 { animation-delay: 0.38s; }
+.pp-d5 { animation-delay: 0.50s; }
+.pp-d6 { animation-delay: 0.62s; }
+.pp-d7 { animation-delay: 0.74s; }

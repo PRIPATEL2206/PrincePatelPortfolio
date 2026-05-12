@@ -1,20 +1,93 @@
-.contectPage{
-    padding: 34px;
-    height: 90vh;
-    width: 100vw;
+.ct-dark  { background: #0a0a0a; color: #f0f0f0; }
+.ct-light { background: #f8f9fa; color: #1a1a2e; }
+
+.ct-grid {
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    max-width: 700px;
 }
 
-.contectLogo{
-    width: 45px ;
-    margin-right: 10px;
-}
-
-.contectBox{
+.ct-card {
     display: flex;
-    margin: 25px;
-    align-items: center;    
+    align-items: center;
+    gap: 1rem;
+    padding: 1.25rem 1.4rem;
+    border-radius: var(--radius-card);
+    box-shadow: var(--shadow-card);
+    text-decoration: none;
+    transition: var(--transition);
 }
 
-.contectBoxContainer{
-    margin-top: 40px;
+.ct-card-dark {
+    background: #141414;
+    border: 1px solid rgba(255,255,255,0.07);
+    color: #f0f0f0;
+}
+
+.ct-card-light {
+    background: #fff;
+    border: 1px solid #e9ecef;
+    color: #1a1a2e;
+}
+
+.ct-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-hover);
+    color: inherit;
+}
+
+.ct-icon-wrap {
+    flex-shrink: 0;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    background: rgba(13, 110, 253, 0.1);
+    padding: 8px;
+}
+
+.ct-icon {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.ct-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+    min-width: 0;
+}
+
+.ct-label {
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--accent);
+}
+
+.ct-value {
+    font-size: 0.88rem;
+    font-weight: 500;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.ct-card { width: 100%; }
+
+.ct-note-wrap { margin-top: 2rem; }
+
+.ct-note {
+    font-size: 0.85rem;
+    opacity: 0.5;
+    text-align: center;
+}
+
+@media (max-width: 480px) {
+    .ct-grid {
+        grid-template-columns: 1fr;
+    }
 }

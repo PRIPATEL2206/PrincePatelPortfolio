@@ -1,54 +1,88 @@
 import { Link } from 'react-router-dom';
 import './HomePage.css';
-import linkedinIcon from '../../assets/photos/icons/linkedinIcon.png'
-import gitHubIcon from '../../assets/photos/icons/gitHubIcon.png'
-import profilePhoto from '../../assets/photos/profilePhoto.jpg'
-import { Button } from '@mui/material';
+import linkedinIcon from '../../assets/photos/icons/linkedinIcon.png';
+import gitHubIcon from '../../assets/photos/icons/gitHubIcon.png';
+import profilePhoto from '../../assets/photos/profilePhoto.jpg';
+import resumePDF from '../../assets/pdfs/Prince_Patel_Resume.pdf';
 
 export default function HomePage({ themeIndex }) {
-    const homeTheme = [{
-        bgcolor: "bg-black",
-        textColor: "text-white",
-    },
-    {
-        bgcolor: "",
-        textColor: "",
-    }
-    ]
-    return (
+    const isDark = themeIndex === 0;
 
-        <div className={`home-page position-relative ${homeTheme[themeIndex].bgcolor} ${homeTheme[themeIndex].textColor}`}>
-            <div className="infoBox">
-                <div className="left-box">
-                    <h1 className='greeting'>Hi , </h1>
-                    <h4 className="nameInfo">I'm Prince Patel </h4>
-                    <div className='d-flex'>
-                        <p className='fieldInfo pe-2'>
-                            I'm
-                        </p>
-                        <div className="fieldInfo skillInfo" >
+    return (
+        <div className={`home-page ${isDark ? 'home-dark' : 'home-light'}`}>
+            {isDark && <div className="hero-glow" aria-hidden="true" />}
+
+            <div className="hero-container">
+                <div className="hero-content">
+                    <p className="hero-greeting pp-anim-up pp-d1">Hi there, I'm</p>
+
+                    <h1 className="hero-name pp-anim-up pp-d2">Prince Patel</h1>
+
+                    <div className="hero-role pp-anim-up pp-d3">
+                        <span>I'm a&nbsp;</span>
+                        <span className="hero-role-anim"></span>
+                    </div>
+
+                    <p className="hero-bio pp-anim-up pp-d4">
+                        System Engineer at TCS — building large-scale ETL pipelines on&nbsp;
+                        <strong>AWS</strong> and ML systems with&nbsp;<strong>PySpark & TensorFlow</strong>.
+                        AWS Certified SA. BE in IT from GEC Gandhinagar.
+                    </p>
+
+                    <div className="hero-stats pp-anim-up pp-d4">
+                        <div className="hero-stat">
+                            <span className="stat-num">125M+</span>
+                            <span className="stat-lbl">Records processed</span>
+                        </div>
+                        <div className="hero-stat-sep" />
+                        <div className="hero-stat">
+                            <span className="stat-num">10%</span>
+                            <span className="stat-lbl">Cloud cost savings</span>
+                        </div>
+                        <div className="hero-stat-sep" />
+                        <div className="hero-stat">
+                            <span className="stat-num">AWS</span>
+                            <span className="stat-lbl">Certified SA</span>
                         </div>
                     </div>
-                    <p className='collegeInfo'>Currently in BE 4 <sup>th</sup> year IT in Government Engineering College,Gandhinagar</p>
-                    <p>Discover some of my passions and accomplishments by checking out the <Button variant="contained">
-                        <Link to="/About" className='link'>about </Link></Button>  section  </p>
-                    <div className="d-flax mb-3">
-                        <Link to="/Projects" type='button' className='btn btn-outline-warning tf-3'>My projects</Link>
-                        <Link to='/About' download type='button' className='btn btn-outline-warning ms-3 tf-3 '>About Me</Link>
 
+                    <div className="hero-ctas pp-anim-up pp-d5">
+                        <Link to="/Projects" className="btn btn-primary hero-btn">
+                            View Projects
+                        </Link>
+                        <Link to="/About" className="btn btn-outline-secondary hero-btn">
+                            About Me
+                        </Link>
+                        <a href={resumePDF} download="Prince_Patel_Resume.pdf" className="btn btn-outline-info hero-btn">
+                            Resume
+                        </a>
                     </div>
-                    <div className="socialmedia mb-4">
-                        <a href="https://www.linkedin.com/in/prince-patel-7900b8212"><img className="link-icon" src={linkedinIcon} alt="linkedin" /></a>
-                        <a href="https://github.com/PRIPATEL2206?tab=repositories"><img className="link-icon" src={gitHubIcon} alt="gitHub" /></a>
+
+                    <div className="hero-socials pp-anim-up pp-d6">
+                        <a
+                            href="https://www.linkedin.com/in/prince-patel-7900b8212"
+                            target="_blank"
+                            rel="noreferrer"
+                            aria-label="LinkedIn"
+                        >
+                            <img className="social-icon" src={linkedinIcon} alt="LinkedIn" />
+                        </a>
+                        <a
+                            href="https://github.com/PRIPATEL2206?tab=repositories"
+                            target="_blank"
+                            rel="noreferrer"
+                            aria-label="GitHub"
+                        >
+                            <img className="social-icon" src={gitHubIcon} alt="GitHub" />
+                        </a>
                     </div>
-
-
-                    <a href='pdfs/Resume.pdf' download type='button' className='btn btn-outline-info mb-5 tf-3'>Resume</a>
                 </div>
-                <div className="right-box">
-                    <img className="profilePhoto" src={profilePhoto} alt="Profile" srcSet="" />
+
+                <div className="hero-photo-wrap pp-anim-scale pp-d2">
+                    <div className="hero-photo-ring" />
+                    <img className="hero-photo" src={profilePhoto} alt="Prince Patel" />
                 </div>
             </div>
         </div>
-    )
+    );
 }

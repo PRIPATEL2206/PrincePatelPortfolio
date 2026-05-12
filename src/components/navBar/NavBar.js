@@ -1,8 +1,8 @@
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import "./NavBar.css";
-import profileImage from "../../assets/photos/profile.png"
+import profileImage from "../../assets/photos/profile.png";
+import resumePDF from "../../assets/pdfs/Prince_Patel_Resume.pdf";
 import { Button, FormControlLabel, Switch, styled } from '@mui/material';
-
 
 const MaterialUISwitch = styled(Switch)(({ theme }) => ({
     width: 62,
@@ -51,85 +51,87 @@ const MaterialUISwitch = styled(Switch)(({ theme }) => ({
     },
 }));
 
-
+const NAV_LINKS = [
+    { to: '/', label: 'Home', end: true },
+    { to: '/About', label: 'About' },
+    { to: '/Skill&Tools', label: 'Skills' },
+    { to: '/Projects', label: 'Projects' },
+    { to: '/Services', label: 'Services' },
+    { to: '/ContectMe', label: 'Contact' },
+];
 
 export default function NavBar({ themeIndex, changeThemeIndex }) {
-    function expendCollaps() {
-        document.getElementById("navbarTogglerDemo02").classList.remove("show");
-    }
-    const toggleTheme = () => {
-        if (themeIndex === 0) {
-            changeThemeIndex(1);
-            return;
-        }
-        changeThemeIndex(0);
+    function collapseNav() {
+        const menu = document.getElementById("ppNavMenu");
+        if (menu) menu.classList.remove("show");
     }
 
-    const navTheme = ["dark", "body-secondary"]
+    const toggleTheme = () => changeThemeIndex(themeIndex === 0 ? 1 : 0);
+    const navTheme = ["dark", "body-secondary"];
+
     return (
-        <>
-            <nav className={`navbar navbar-expand-sm bg-${navTheme[themeIndex]}`} data-bs-theme={`${navTheme[themeIndex]}`}>
-                <div className="container-fluid" >
-                    <Link to="/" onClick={expendCollaps} className='navbar-brand'>
-                        <img src={profileImage} className="navIcon" alt="profile" srcSet="" />
-                    </Link>
-                    <h4>Prince Patel</h4>
-                    <button id='collapsButton' className={`navbar-toggler bg-${themeIndex !== 0 ? '' : 'light'}`} type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation" style={{ "boxShadow": "none" }}>
-                        <span className="navbar-toggler-icon" ></span>
-                    </button>
-                    <div className="collapse navbar-collapse  " style={{ overflow: "hidden" }} id="navbarTogglerDemo02">
-                        <ul className="navbar-nav me-3 ms-auto mb-2 mb-lg-0 d-flex align-items-center">
-                            <Link to="/" onClick={expendCollaps} className="nav-link" aria-current="page" >
-                                <Button variant="text" style={{ color: themeIndex === 0 ? "white" : "black" }} >
-                                    Home
-                                </Button>
-                            </Link>
-                            <Link to="/About" onClick={expendCollaps} className="nav-link" >
-                                <Button variant="text" >
-                                    About
-                                </Button>
-                            </Link>
+        <nav
+            className={`navbar navbar-expand-sm bg-${navTheme[themeIndex]} pp-navbar`}
+            data-bs-theme={navTheme[themeIndex]}
+        >
+            <div className="container-fluid px-3">
+                <NavLink to="/" onClick={collapseNav} className="navbar-brand d-flex align-items-center gap-1">
+                    <img src={profileImage} className="navIcon" alt="Prince Patel" />
+                    <span className="nav-brand-name">Prince Patel</span>
+                </NavLink>
 
-                            <Link to="/Skill&Tools" onClick={expendCollaps} className="nav-link" >
-                                <Button variant="text">
-                                    Skill & Tools
-                                </Button>
-                            </Link>
+                <button
+                    className={`navbar-toggler bg-${themeIndex !== 0 ? '' : 'light'}`}
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#ppNavMenu"
+                    aria-controls="ppNavMenu"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation"
+                    style={{ boxShadow: "none" }}
+                >
+                    <span className="navbar-toggler-icon"></span>
+                </button>
 
-                            <Link to="/Projects" onClick={expendCollaps} className="nav-link" >
-                                <Button variant="text">
-                                    Projects
-                                </Button>
-                            </Link>
+                <div className="collapse navbar-collapse" id="ppNavMenu" style={{ overflow: "hidden" }}>
+                    <ul className="navbar-nav me-2 ms-auto mb-2 mb-sm-0 d-flex align-items-center">
+                        {NAV_LINKS.map(({ to, label, end }) => (
+                            <li className="nav-item" key={to}>
+                                <NavLink
+                                    to={to}
+                                    end={end}
+                                    onClick={collapseNav}
+                                    className={({ isActive }) =>
+                                        `nav-link pp-nav-link${isActive ? ' pp-nav-active' : ''}`
+                                    }
+                                >
+                                    {label}
+                                </NavLink>
+                            </li>
+                        ))}
 
-                            <Link to="/Services" onClick={expendCollaps} className="nav-link" >
-                                <Button variant="text">
-                                    Services
-                                </Button>
-                            </Link>
-
-                            <Link to="/ContectMe" onClick={expendCollaps} className="nav-link" >
-                                <Button variant="text">
-                                    Contact Me
-                                </Button>
-                            </Link>
-
-
+                        <li className="nav-item">
                             <FormControlLabel
-                                control={<MaterialUISwitch sx={{ m: 1, mr: 0 }} defaultChecked onChange={toggleTheme} />}
+                                control={
+                                    <MaterialUISwitch
+                                        sx={{ m: 1, mr: 0 }}
+                                        defaultChecked
+                                        onChange={toggleTheme}
+                                    />
+                                }
                             />
+                        </li>
 
-                            <a href='pdfs/Resume.pdf' className='' download >
-                                <Button variant="outlined">
+                        <li className="nav-item ms-1">
+                            <a href={resumePDF} download="Prince_Patel_Resume.pdf">
+                                <Button variant="outlined" size="small">
                                     Resume
                                 </Button>
                             </a>
-
-                        </ul>
-
-                    </div>
+                        </li>
+                    </ul>
                 </div>
-            </nav>
-        </>
-    )
+            </div>
+        </nav>
+    );
 }
