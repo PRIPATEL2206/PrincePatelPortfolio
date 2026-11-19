@@ -98,7 +98,7 @@ function ExperienceScreen() {
                           <img
                             src={exp.logo as unknown as string}
                             alt={exp.company}
-                            className="w-12 h-12 rounded-xl object-cover border border-white/10 flex-shrink-0"
+                            className="w-12 h-12 rounded-xl object-cover border border-gray-200 dark:border-white/10 flex-shrink-0"
                           />
                         ) : (
                           <div
@@ -108,23 +108,23 @@ function ExperienceScreen() {
                           </div>
                         )}
                         <div>
-                          <h3 className="text-base sm:text-lg font-bold text-white">{exp.role}</h3>
-                          <p className="text-blue-400 text-sm font-medium">{exp.company}</p>
+                          <h3 className="text-base sm:text-lg font-bold text-gray-900 dark:text-white">{exp.role}</h3>
+                          <p className="text-blue-600 dark:text-blue-400 text-sm font-medium">{exp.company}</p>
                         </div>
                       </div>
                       <div className="sm:text-right flex sm:flex-col gap-2 sm:gap-1 items-center sm:items-end flex-shrink-0">
-                        <span className="text-xs text-gray-300 bg-white/10 px-3 py-1 rounded-full">
+                        <span className="text-xs text-gray-700 dark:text-gray-300 bg-gray-200/60 dark:bg-white/10 px-3 py-1 rounded-full">
                           {exp.year}
                         </span>
-                        <span className="text-xs text-gray-500">{exp.location}</span>
+                        <span className="text-xs text-gray-500 dark:text-gray-500">{exp.location}</span>
                       </div>
                     </div>
 
                     {/* Bullet points */}
                     <ul className="space-y-2 mb-4">
                       {exp.bullets.map((bullet, j) => (
-                        <li key={j} className="flex items-start gap-2 text-sm text-gray-300 leading-relaxed">
-                          <span className="text-blue-400 mt-0.5 flex-shrink-0">▸</span>
+                        <li key={j} className="flex items-start gap-2 text-sm text-gray-600 dark:text-gray-300 leading-relaxed">
+                          <span className="text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0">▸</span>
                           <span>{bullet}</span>
                         </li>
                       ))}

@@ -25,16 +25,16 @@ export function AnimatedPinCard(
         title={project.linkTitle}
         href={project.link}
       >
-        <div className="flex basis-full overflow-hidden flex-col p-4 tracking-tight text-slate-100/50 sm:basis-1/2 w-[20rem] h-[25rem] ">
-          <h3 className="max-w-xs !pb-2 !m-0 font-bold  text-base text-slate-100">
+        <div className="flex basis-full overflow-hidden flex-col p-4 tracking-tight text-gray-600/80 dark:text-slate-100/50 sm:basis-1/2 w-[20rem] h-[25rem] ">
+          <h3 className="max-w-xs !pb-2 !m-0 font-bold  text-base text-gray-900 dark:text-slate-100">
             {project.title}
           </h3>
           <div className="text-base !m-0 !p-0 font-normal">
-            <span className="text-slate-500 ">
+            <span className="text-gray-600 dark:text-slate-500 ">
               {project.about}
             </span>
             <br />
-            {project.technologis && <span className="text-slate-50 mt-10 text-xs">
+            {project.technologis && <span className="text-gray-800 dark:text-slate-50 mt-10 text-xs">
               {project.technologis}
             </span>}
           </div>

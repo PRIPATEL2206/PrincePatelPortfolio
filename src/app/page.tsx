@@ -16,7 +16,7 @@ export default function Home() {
   const setmode = (val: SetStateAction<boolean>) => setIsDark(val)
 
   return (
-    <div className={`w-full overflow-hidden text-white ${isDark ? 'bg-black dark' : 'bg-white'}`}>
+    <div className={`w-full overflow-hidden ${isDark ? 'bg-black text-white dark' : 'bg-white text-gray-900'}`}>
       <FlotingThemChanger setIsDark={setmode} isDark={isDark} />
       <Navbar />
       <FlotingSocialMedia />

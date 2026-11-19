@@ -11,8 +11,8 @@ const stats = [
 ]
 
 const nameWords = [
-  { text: 'Prince', className: 'text-blue-400 dark:text-blue-400' },
-  { text: 'Patel',  className: 'text-blue-400 dark:text-blue-400' },
+  { text: 'Prince', className: 'text-blue-600 dark:text-blue-400' },
+  { text: 'Patel',  className: 'text-blue-600 dark:text-blue-400' },
 ]
 
 const roleWords = [
@@ -48,7 +48,7 @@ function About() {
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.1 }}
-          className="text-gray-400 text-xl sm:text-2xl mb-1"
+          className="text-gray-600 dark:text-gray-400 text-xl sm:text-2xl mb-1"
         >
           Hey, I'm
         </motion.p>
@@ -64,13 +64,13 @@ function About() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.6 }}
-          className="text-neutral-400 text-base sm:text-lg max-w-xl mt-4 leading-relaxed"
+          className="text-gray-600 dark:text-neutral-400 text-base sm:text-lg max-w-xl mt-4 leading-relaxed"
         >
           Software Engineer at TCS with 2+ years building high-throughput distributed
           systems, scalable microservices, and{' '}
-          <span className="text-blue-400 font-semibold">ML pipelines processing 125M+ records on AWS</span>.
+          <span className="text-blue-600 dark:text-blue-400 font-semibold">ML pipelines processing 125M+ records on AWS</span>.
           Designs cloud-native architectures with Python, FastAPI, and Django.{' '}
-          <span className="text-blue-400 font-semibold">800+ LeetCode problems solved</span>.
+          <span className="text-blue-600 dark:text-blue-400 font-semibold">800+ LeetCode problems solved</span>.
           AWS Certified Solutions Architect.
         </motion.p>
 
@@ -85,7 +85,7 @@ function About() {
               className="stat-card"
             >
               <span className="text-xl sm:text-2xl font-bold text-gradient-blue">{s.value}</span>
-              <span className="text-[11px] sm:text-xs text-gray-500 mt-1 text-center leading-tight">{s.label}</span>
+              <span className="text-[11px] sm:text-xs text-gray-600 dark:text-gray-500 mt-1 text-center leading-tight">{s.label}</span>
             </motion.div>
           ))}
         </div>
@@ -106,7 +106,7 @@ function About() {
           </a>
           <a
             href="#contact"
-            className="px-6 py-3 border border-white/20 hover:border-blue-500/60 text-gray-200 hover:text-white rounded-full font-semibold text-sm transition-all duration-200 hover:scale-[1.02]"
+            className="px-6 py-3 border border-gray-300 dark:border-white/20 hover:border-blue-500/60 text-gray-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-white rounded-full font-semibold text-sm transition-all duration-200 hover:scale-[1.02]"
           >
             Contact Me
           </a>

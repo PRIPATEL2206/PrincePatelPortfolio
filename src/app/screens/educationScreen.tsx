@@ -73,14 +73,14 @@ function EducationScreen() {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
-          className="rounded-2xl flex flex-col antialiased dark:bg-black dark:bg-grid-white/[0.05] items-center justify-center relative overflow-hidden"
+          className="rounded-2xl flex flex-col antialiased bg-gray-50 dark:bg-black dark:bg-grid-white/[0.05] items-center justify-center relative overflow-hidden"
         >
           <InfiniteMovingCard items={educationData} speed="slow" />
         </motion.div>
 
         {/* Certifications */}
         <div className="mt-10">
-          <h3 className="text-lg font-semibold text-gray-300 mb-4">Certifications</h3>
+          <h3 className="text-lg font-semibold text-gray-700 dark:text-gray-300 mb-4">Certifications</h3>
           <div className="flex flex-wrap gap-4">
             {certifications.map((cert, i) => (
               <motion.div
@@ -97,12 +97,12 @@ function EducationScreen() {
                   {cert.icon}
                 </div>
                 <div>
-                  <p className="text-white font-semibold text-sm sm:text-base leading-tight">
+                  <p className="text-gray-900 dark:text-white font-semibold text-sm sm:text-base leading-tight">
                     {cert.title}
                   </p>
-                  <p className="text-gray-400 text-xs sm:text-sm mt-0.5">{cert.issuer}</p>
+                  <p className="text-gray-500 dark:text-gray-400 text-xs sm:text-sm mt-0.5">{cert.issuer}</p>
                 </div>
-                <span className="ml-auto text-xs text-gray-500 flex-shrink-0">{cert.year}</span>
+                <span className="ml-auto text-xs text-gray-500 dark:text-gray-500 flex-shrink-0">{cert.year}</span>
               </motion.div>
             ))}
           </div>

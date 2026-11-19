@@ -106,7 +106,7 @@ function SkillsAndToolsScreen() {
               transition={{ delay: i * 0.05 }}
               className="skill-category"
             >
-              <h4 className="text-xs font-semibold text-gray-400 uppercase tracking-widest">
+              <h4 className="text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-widest">
                 {cat.label}
               </h4>
               <div className="flex flex-wrap gap-2">
@@ -120,7 +120,7 @@ function SkillsAndToolsScreen() {
 
         {/* Animated icon rows */}
         <div className="space-y-2">
-          <p className="text-xs text-gray-600 uppercase tracking-widest mb-4">Core Tech Icons</p>
+          <p className="text-xs text-gray-500 dark:text-gray-600 uppercase tracking-widest mb-4">Core Tech Icons</p>
 
           <InfiniteMovingAnimation direction="left">
             {iconSkills.map((skill) => (
