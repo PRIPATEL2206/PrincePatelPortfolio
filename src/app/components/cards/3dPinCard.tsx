@@ -1,0 +1,48 @@
+"use client";
+import React from "react";
+import { PinContainer } from "../ui/3d-pinui";
+
+export function AnimatedPinCard(
+  {
+    project,
+    key
+  }: {
+    project: {
+      linkTitle: string;
+      link: string;
+      title: string;
+      about: string;
+      image: string;
+      technologis: string;
+    };
+    key: string
+  }
+) {
+  return (
+    <div className="h-[30rem] w-full flex items-center justify-center " key={key}>
+      <PinContainer
+        otherKey={key}
+        title={project.linkTitle}
+        href={project.link}
+      >
+        <div className="flex basis-full overflow-hidden flex-col p-4 tracking-tight text-slate-100/50 sm:basis-1/2 w-[20rem] h-[25rem] ">
+          <h3 className="max-w-xs !pb-2 !m-0 font-bold  text-base text-slate-100">
+            {project.title}
+          </h3>
+          <div className="text-base !m-0 !p-0 font-normal">
+            <span className="text-slate-500 ">
+              {project.about}
+            </span>
+            <br />
+            {project.technologis && <span className="text-slate-50 mt-10 text-xs">
+              {project.technologis}
+            </span>}
+          </div>
+          <div className="flex  w-full rounded-lg mt-4 object-fill " >
+            <img src={project.image} alt={project.title} className="w-full h-full object-cover" />
+          </div>
+        </div>
+      </PinContainer>
+    </div>
+  );
+}
