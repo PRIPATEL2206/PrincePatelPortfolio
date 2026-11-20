@@ -36,7 +36,7 @@ const skillCategories = [
   {
     label: 'Cloud & DevOps',
     color: 'orange',
-    skills: ['AWS (ECS, Glue, Lambda, Bedrock, S3, Redshift, Aurora, CloudFormation)', 'Docker', 'GitHub Actions', 'Auto-Scaling'],
+    skills: ['AWS ECS', 'AWS Glue', 'Lambda', 'Bedrock', 'S3', 'Redshift', 'Aurora', 'CloudFormation', 'Docker', 'GitHub Actions', 'Auto-Scaling'],
   },
   {
     label: 'Databases',
